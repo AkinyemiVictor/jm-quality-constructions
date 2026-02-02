@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+:root {
+  --brand-gold: #b4892c;
+  --brand-gold-soft: #c79b3a;
+  --brand-dark: #2a1f18;
+  --brand-deep: #241a13;
+  --brand-cream: #f7f2e8;
+  --brand-muted: #d9cdb7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--brand-cream);
+  background: var(--brand-deep);
+  font-family: var(--font-body), "Times New Roman", serif;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-link), "Times New Roman", serif;
+}
+
+.font-display {
+  font-family: var(--font-display), "Times New Roman", serif;
+}
+
+.font-body {
+  font-family: var(--font-body), "Times New Roman", serif;
+}
+
+.font-link {
+  font-family: var(--font-link), "Times New Roman", serif;
+}
+
+.nav-links a {
+  font-family: var(--font-body), "Times New Roman", serif;
+}
+
+.nav-primary a {
+  font-family: var(--font-display), "Times New Roman", serif;
+}
+
+.angled-nav {
+  position: relative;
+  clip-path: polygon(18px 0, 100% 0, 100% 100%, 18px 100%, 0 50%);
+  padding-left: 3.5rem;
+  margin-left: auto;
+}
