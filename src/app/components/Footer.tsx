@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 import Image from "next/image";
-import logo from "../assets/jm-quality-construction 1.png";
+import logo from "../assets/logos/jm-quality-construction.png";
 
 const contactItems = [
   { label: "260-638-5026", icon: PhoneIcon },

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../assets/jm-quality-construction 1.png";
+import logo from "../assets/logos/jm-quality-construction.png";
 
 const primaryLinks = [
   "Commercial",
@@ -23,9 +23,13 @@ export default function Header() {
             priority
           />
 
-          <nav className="nav-primary hidden flex-1 items-center justify-end gap-8 text-[1.05rem] uppercase tracking-[0.18em] text-[var(--brand-cream)] lg:flex">
+          <nav className="nav-primary hidden flex-1 items-center justify-end gap-8 text-[24px] leading-[26px] font-normal uppercase tracking-[0] text-[var(--brand-cream)] lg:flex">
             {primaryLinks.map((link) => (
-              <a key={link} className="transition hover:text-white/80" href="#">
+              <a
+                key={link}
+                className="text-center transition hover:text-white/80"
+                href="#"
+              >
                 {link}
               </a>
             ))}
@@ -39,12 +43,12 @@ export default function Header() {
       </div>
 
       <div className="pointer-events-none absolute bottom-0 left-0 z-30 w-full">
-        <div className="nav-links angled-nav absolute right-0 top-0 hidden h-[40px] w-[600px] translate-y-1/2 items-center gap-8 bg-[var(--brand-dark)] px-8 text-[0.82rem] leading-none tracking-[0.12em] text-[var(--brand-cream)] shadow-[0_12px_30px_rgba(0,0,0,0.35)] md:flex">
+        <div className="nav-links angled-nav absolute right-0 top-0 hidden h-[40px] w-[600px] translate-y-1/2 items-center gap-8 bg-[var(--brand-dark)] px-8 text-[16px] leading-none font-normal tracking-[0] text-[var(--brand-cream)] shadow-[0_12px_30px_rgba(0,0,0,0.35)] md:flex">
           <span className="h-2.5 w-2.5 rotate-45 bg-white" />
           {secondaryLinks.map((link) => (
             <a
               key={link}
-              className="transition hover:text-white/80 first:ml-10"
+              className="text-center transition hover:text-white/80 first:ml-10"
               href="#"
             >
               {link}
