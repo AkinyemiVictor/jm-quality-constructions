@@ -13,7 +13,7 @@ export default function CtaBand() {
           </p>
         </div>
         <a
-          className="inline-flex min-w-[200px] items-center justify-center bg-white px-8 py-3 text-[18px] font-extrabold leading-none tracking-[0] text-[#2B221A] shadow-[0_10px_30px_rgba(32,24,18,0.28)] transition hover:bg-white/90"
+          className="inline-flex min-w-[200px] items-center justify-center bg-white px-8 py-3 text-[18px] font-extrabold leading-none tracking-[0] !text-[#2B221A] shadow-[0_10px_30px_rgba(32,24,18,0.28)] transition hover:bg-white/90"
           href="#"
         >
           Request a Quote
