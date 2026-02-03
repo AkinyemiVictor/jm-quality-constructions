@@ -11,6 +11,14 @@ import serviceCommercial from "./assets/services/commercial.png";
 import serviceResidential from "./assets/services/residential.png";
 import serviceTransportation from "./assets/services/transportation.png";
 import serviceFraming from "./assets/services/framing.png";
+import work1 from "./assets/work/our-work-1.png";
+import work2 from "./assets/work/our-work-2.png";
+import work3 from "./assets/work/our-work-3.png";
+import work4 from "./assets/work/our-work-4.png";
+import work5 from "./assets/work/our-work-5.png";
+import work6 from "./assets/work/our-work-6.png";
+import work7 from "./assets/work/our-work-7.png";
+import work8 from "./assets/work/our-work-8.png";
 
 export default function Home() {
   return (
@@ -130,20 +138,22 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="relative px-6 py-6">
-                    <span className="absolute left-0 top-[2.1rem] h-12 w-[3px] bg-[var(--brand-gold)]" />
-                    <p className="font-display text-[32px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22]">
-                      {item.title}
-                    </p>
-                    <p className="mt-2 text-[16px] leading-none text-[#6d6057] font-link">
-                      {item.description}
-                    </p>
-                    <a
-                      className="mt-5 inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
-                      href="#"
-                    >
-                      Learn More
-                    </a>
+                  <div className="px-6 py-6">
+                    <div className="grid grid-cols-[8px_1fr] gap-x-3 gap-y-2">
+                      <span className="row-start-2 h-8 w-[3px] bg-[var(--brand-gold)]" />
+                      <p className="col-start-2 font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
+                        {item.title}
+                      </p>
+                      <p className="col-start-2 text-[16px] leading-none text-[#6d6057] font-link">
+                        {item.description}
+                      </p>
+                      <a
+                        className="col-start-2 mt-3 inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
+                        href="#"
+                      >
+                        Learn More
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -184,7 +194,7 @@ export default function Home() {
               ].map((item) => {
                 const iconSrc = item.icon;
                 return (
-                  <div key={item.title} className="flex items-start gap-6">
+                  <div key={item.title} className="flex items-center gap-6">
                     <div className="flex aspect-square h-28 w-28 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)]">
                       <Image
                         src={iconSrc}
@@ -193,10 +203,10 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <p className="text-sm font-bold uppercase tracking-[0.08em] text-[#3a2b22]">
+                      <p className="font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
                         {item.title}
                       </p>
-                      <p className="mt-2 text-[13px] leading-relaxed text-[#6d6057]">
+                      <p className="mt-2 text-[16px] leading-none text-[#6d6057] font-link">
                         {item.description}
                       </p>
                     </div>
@@ -206,7 +216,7 @@ export default function Home() {
             </div>
             <div className="mt-12 flex justify-center">
               <a
-                className="inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-3 text-[11px] uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(0,0,0,0.15)] transition hover:bg-[var(--brand-gold-soft)]"
+                className="inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-3 text-[18px] font-extrabold leading-none tracking-[0] !text-white shadow-[0_10px_24px_rgba(0,0,0,0.15)] transition hover:bg-[var(--brand-gold-soft)]"
                 href="#"
               >
                 Explore Our Other Services
@@ -216,15 +226,31 @@ export default function Home() {
         </section>
         <section className="bg-white text-[#3a2b22]">
           <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10 lg:py-20">
-            <h2 className="text-center text-lg font-bold uppercase tracking-[0.12em] text-[#3a2b22]">
+            <h2 className="text-center font-display text-[38px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22]">
               Our Work
             </h2>
             <div className="mt-10 grid gap-0 overflow-hidden border border-[#e7e1da] lg:grid-cols-4">
-              {Array.from({ length: 8 }).map((_, index) => (
+              {[
+                work1,
+                work2,
+                work3,
+                work4,
+                work5,
+                work6,
+                work7,
+                work8,
+              ].map((image, index) => (
                 <div
                   key={`work-${index}`}
-                  className="aspect-[4/3] w-full border border-[#e7e1da] bg-[#d8d0c5]"
-                />
+                  className="relative aspect-[4/3] w-full border border-[#e7e1da]"
+                >
+                  <Image
+                    src={image}
+                    alt={`Our work ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               ))}
             </div>
           </div>

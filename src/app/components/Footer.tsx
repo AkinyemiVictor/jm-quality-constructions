@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 import Image from "next/image";
-import logo from "../assets/logos/jm-quality-construction.png";
+import logo from "../assets/logos/jm-quality-construction-footer.png";
 
 const contactItems = [
   { label: "260-638-5026", icon: PhoneIcon },
@@ -29,17 +29,17 @@ export default function Footer() {
               alt="JM Quality Construction"
               className="h-12 w-auto"
             />
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/80">
+            <p className="mt-6 max-w-sm text-[16px] leading-none text-white/80 font-body">
               Whether you need modular installation, framing solutions or
               oversized-load transportation, our team is ready to assist.
             </p>
           </div>
 
           <div>
-            <p className="relative inline-block text-sm uppercase tracking-[0.32em] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
+            <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Contact
             </p>
-            <div className="mt-6 space-y-4 text-sm text-white/85">
+            <div className="mt-6 space-y-4 text-[16px] leading-none text-white/85 font-body">
               {contactItems.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -55,13 +55,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="relative inline-block text-sm uppercase tracking-[0.32em] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
+            <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Links
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-white/85">
+            <ul className="mt-6 space-y-2 text-[16px] leading-none text-white/85 font-body">
               {quickLinks.map((item) => (
                 <li key={item}>
-                  <a className="group flex items-center gap-2" href="#">
+                  <a className="group flex items-center gap-2 font-body" href="#">
                     <span className="text-[var(--brand-gold-soft)] transition group-hover:translate-x-1">
                       &gt;
                     </span>
@@ -73,13 +73,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="relative inline-block text-sm uppercase tracking-[0.32em] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
+            <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Services
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-white/85">
+            <ul className="mt-6 space-y-2 text-[16px] leading-none text-white/85 font-body">
               {services.map((item) => (
                 <li key={item}>
-                  <a className="group flex items-center gap-2" href="#">
+                  <a className="group flex items-center gap-2 font-body" href="#">
                     <span className="text-[var(--brand-gold-soft)] transition group-hover:translate-x-1">
                       &gt;
                     </span>
