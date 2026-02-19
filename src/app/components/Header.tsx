@@ -35,7 +35,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.26em] lg:hidden">
+          <div className="hamburger-menu flex items-center gap-3 text-xs uppercase tracking-[0.26em] lg:hidden">
             <span className="h-2 w-2 rotate-45 bg-[var(--brand-cream)]" />
             <span>Menu</span>
           </div>

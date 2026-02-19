@@ -1,15 +1,28 @@
-import type { SVGProps } from "react";
 import Image from "next/image";
 import logo from "../assets/logos/jm-quality-construction-footer.png";
+import phoneIcon from "../assets/footer/phone.png";
+import faxIcon from "../assets/footer/fax.png";
+import mailIcon from "../assets/footer/mail.png";
+import locationIcon from "../assets/footer/location.png";
+import arrowIcon from "../assets/footer/arrow.png";
 
 const contactItems = [
-  { label: "260-638-5026", icon: PhoneIcon },
-  { label: "574-642-3243", icon: FaxIcon },
-  { label: "jason@shipshewanahomes.com", icon: MailIcon },
-  { label: "P.O. Box 103\nMillersburg, IN 46543", icon: PinIcon },
+  { label: "260-638-5026", icon: phoneIcon, alt: "Phone" },
+  { label: "574-642-3243", icon: faxIcon, alt: "Fax" },
+  { label: "jason@shipshewanahomes.com", icon: mailIcon, alt: "Email" },
+  {
+    label: "P.O. Box 103\nMillersburg, IN 46543",
+    icon: locationIcon,
+    alt: "Location",
+  },
 ];
 
-const quickLinks = ["Home", "About Us", "News", "Contact"];
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "#" },
+  { label: "News", href: "/news" },
+  { label: "Contact", href: "#" },
+];
 const services = [
   "Framing",
   "Commercial Construction",
@@ -39,15 +52,21 @@ export default function Footer() {
             <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Contact
             </p>
-            <div className="mt-6 space-y-4 text-[16px] leading-none text-white/85 font-body">
+            <div className="mt-6 w-fit space-y-4 text-[16px] leading-none text-white/85 font-body mx-auto">
               {contactItems.map((item) => {
-                const Icon = item.icon;
                 return (
-                  <div key={item.label} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-full border border-[var(--brand-gold-soft)]/50 text-[var(--brand-gold-soft)]">
-                      <Icon className="h-3.5 w-3.5" />
+                  <div
+                    key={item.label}
+                    className="grid grid-cols-[16px_1fr] items-center gap-3"
+                  >
+                    <Image
+                      src={item.icon}
+                      alt={item.alt}
+                      className="h-4 w-4 shrink-0 object-contain"
+                    />
+                    <span className="whitespace-pre-line text-left">
+                      {item.label}
                     </span>
-                    <span className="whitespace-pre-line">{item.label}</span>
                   </div>
                 );
               })}
@@ -58,14 +77,21 @@ export default function Footer() {
             <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Links
             </p>
-            <ul className="mt-6 space-y-2 text-[16px] leading-none text-white/85 font-body">
+            <ul className="mt-6 space-y-3 text-[16px] leading-none text-white/85 font-body">
               {quickLinks.map((item) => (
-                <li key={item}>
-                  <a className="group flex items-center gap-2 font-body" href="#">
-                    <span className="text-[var(--brand-gold-soft)] transition group-hover:translate-x-1">
-                      &gt;
+                <li key={item.label}>
+                  <a
+                    className="group flex items-center gap-3 font-body"
+                    href={item.href}
+                  >
+                    <span className="transition group-hover:translate-x-1">
+                      <Image
+                        src={arrowIcon}
+                        alt=""
+                        className="h-3 w-3 object-contain"
+                      />
                     </span>
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
@@ -76,12 +102,16 @@ export default function Footer() {
             <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Services
             </p>
-            <ul className="mt-6 space-y-2 text-[16px] leading-none text-white/85 font-body">
+            <ul className="mt-6 space-y-3 text-[16px] leading-none text-white/85 font-body">
               {services.map((item) => (
                 <li key={item}>
-                  <a className="group flex items-center gap-2 font-body" href="#">
-                    <span className="text-[var(--brand-gold-soft)] transition group-hover:translate-x-1">
-                      &gt;
+                  <a className="group flex items-center gap-3 font-body" href="#">
+                    <span className="transition group-hover:translate-x-1">
+                      <Image
+                        src={arrowIcon}
+                        alt=""
+                        className="h-3 w-3 object-contain"
+                      />
                     </span>
                     {item}
                   </a>
@@ -91,76 +121,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/15 pt-6 text-xs tracking-[0.14em] text-white/70">
+        <div className="mt-12 border-t border-white/15 pt-6 font-body text-[16px] font-normal leading-none tracking-[0] text-white/70">
           &copy;2023 JM Quality Construction. All Rights Reserved
         </div>
       </div>
     </footer>
-  );
-}
-
-type IconProps = SVGProps<SVGSVGElement>;
-
-function PhoneIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
-      <path
-        d="M5 5h4l2 4-2 2a11 11 0 005 5l2-2 4 2v4c0 1-1 2-2 2-8.3 0-15-6.7-15-15 0-1 1-2 2-2z"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function FaxIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
-      <path
-        d="M7 7V4h10v3M6 10h12a2 2 0 012 2v6H4v-6a2 2 0 012-2z"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M8 14h8M8 17h5"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function MailIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
-      <path
-        d="M4 6h16v12H4z"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M4 7l8 6 8-6"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function PinIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
-      <path
-        d="M12 21s6-6 6-11a6 6 0 10-12 0c0 5 6 11 6 11z"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="12" cy="10" r="2.5" strokeWidth="1.6" />
-    </svg>
   );
 }

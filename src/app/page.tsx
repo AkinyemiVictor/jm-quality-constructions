@@ -139,21 +139,23 @@ export default function Home() {
                     />
                   </div>
                   <div className="px-6 py-6">
-                    <div className="grid grid-cols-[8px_1fr] gap-x-3 gap-y-2">
-                      <span className="row-start-2 h-8 w-[3px] bg-[var(--brand-gold)]" />
-                      <p className="col-start-2 font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
-                        {item.title}
-                      </p>
-                      <p className="col-start-2 text-[16px] leading-none text-[#6d6057] font-link">
-                        {item.description}
-                      </p>
-                      <a
-                        className="col-start-2 mt-3 inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
-                        href="#"
-                      >
-                        Learn More
-                      </a>
+                    <div className="grid grid-cols-[3px_1fr] gap-x-4">
+                      <span className="h-8 w-[3px] self-center -translate-y-[2px] bg-[var(--brand-gold)]" />
+                      <div>
+                        <p className="font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
+                          {item.title}
+                        </p>
+                        <p className="mt-2 text-[16px] leading-none text-[#6d6057] font-link">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
+                    <a
+                      className="mt-4 inline-flex w-fit items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
+                      href="#"
+                    >
+                      Learn More
+                    </a>
                   </div>
                 </div>
               ))}

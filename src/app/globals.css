@@ -55,3 +55,9 @@ a {
   padding-left: 3.5rem;
   margin-left: auto;
 }
+
+@media (max-width: 525px) {
+  .hamburger-menu {
+    display: none !important;
+  }
+}
