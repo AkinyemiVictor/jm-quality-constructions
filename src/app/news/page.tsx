@@ -51,7 +51,7 @@ export default function NewsPage() {
                     <p className="font-display text-[20px] font-normal uppercase leading-[24px] tracking-[0] text-[#3a2b22]">
                       {item.title}
                     </p>
-                    <p className="mt-3 text-[16px] leading-none text-[#6d6057] font-body">
+                    <p className="mt-3 text-[16px] leading-[1.2] text-[#6d6057] font-body">
                       {item.excerpt}
                     </p>
                     <Link

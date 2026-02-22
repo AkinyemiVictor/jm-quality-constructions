@@ -38,7 +38,7 @@ export default function Home() {
             <h1 className="font-display text-[100px] font-bold uppercase leading-[90px] tracking-[-0.02em] drop-shadow-md">
               JM Quality Construction
             </h1>
-            <p className="mt-3 max-w-[640px] text-[19px] leading-none text-white/90">
+            <p className="mt-3 max-w-[640px] text-[19px] leading-[1.15] text-white/90">
               At JM Quality Construction, we specialize in modular installation,
               transportation and framing for commercial and residential projects.
             </p>
@@ -58,7 +58,7 @@ export default function Home() {
                 <br />
                 Framing &amp; Transportation
               </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-[16px] leading-none text-[#6d6057]">
+              <p className="mx-auto mt-4 max-w-3xl text-[16px] leading-[1.2] text-[#6d6057]">
                 Our northern Indiana-based team works with developers, builders
                 and homeowners to set and complete structures with a focus on
                 quality, timeliness and professionalism. Whether placing a
@@ -66,7 +66,7 @@ export default function Home() {
                 managing oversized transportation, we bring the expertise and
                 reliability needed to get the job done right.
               </p>
-              <p className="mx-auto mt-3 max-w-3xl text-[16px] leading-none text-[#6d6057]">
+              <p className="mx-auto mt-3 max-w-3xl text-[16px] leading-[1.2] text-[#6d6057]">
                 With decades of industry experience, we’ve built a reputation
                 for delivering projects on schedule, minimizing downtime and
                 maintaining the highest standards of workmanship.
@@ -139,17 +139,16 @@ export default function Home() {
                     />
                   </div>
                   <div className="px-6 py-6">
-                    <div className="grid grid-cols-[3px_1fr] gap-x-4">
-                      <span className="h-8 w-[3px] self-center -translate-y-[2px] bg-[var(--brand-gold)]" />
-                      <div>
-                        <p className="font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
-                          {item.title}
-                        </p>
-                        <p className="mt-2 text-[16px] leading-none text-[#6d6057] font-link">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
+                    <p className="font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
+                      {item.title}
+                    </p>
+                    <p className="relative mt-2 text-[16px] leading-[1.2] text-[#6d6057] font-link">
+                      <span
+                        className="pointer-events-none absolute -left-6 top-0 h-full w-[3px] bg-[var(--brand-gold)]"
+                        aria-hidden="true"
+                      />
+                      {item.description}
+                    </p>
                     <a
                       className="mt-4 inline-flex w-fit items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
                       href="#"
@@ -171,26 +170,46 @@ export default function Home() {
               {[
                 {
                   title: "Decades of Experience",
-                  description:
-                    "A team with over 80 years of combined industry expertise",
+                  description: (
+                    <>
+                      A team with over 80 years of combined
+                      <br />
+                      industry expertise
+                    </>
+                  ),
                   icon: iconStars,
                 },
                 {
                   title: "Proven Efficiency",
-                  description:
-                    "We show up on time, ready to work and get the job done right — the first time",
+                  description: (
+                    <>
+                      We show up on time, ready to work and get
+                      <br />
+                      the job done right the first time
+                    </>
+                  ),
                   icon: iconClock,
                 },
                 {
                   title: "Comprehensive Coordination",
-                  description:
-                    "Handling permits, planning and site logistics for smooth execution",
+                  description: (
+                    <>
+                      Handling permits, planning and site
+                      <br />
+                      logistics for smooth execution
+                    </>
+                  ),
                   icon: iconPeople,
                 },
                 {
                   title: "Trusted by Builders & Developers",
-                  description:
-                    "From local builds to remote commercial projects, we bring reliability to every job",
+                  description: (
+                    <>
+                      From local builds to remote commercial
+                      <br />
+                      projects, we bring reliability to every job
+                    </>
+                  ),
                   icon: iconBuilding,
                 },
               ].map((item) => {
@@ -208,7 +227,7 @@ export default function Home() {
                       <p className="font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
                         {item.title}
                       </p>
-                      <p className="mt-2 text-[16px] leading-none text-[#6d6057] font-link">
+                      <p className="mt-2 text-[16px] leading-[1.2] text-[#6d6057] font-link">
                         {item.description}
                       </p>
                     </div>
@@ -231,7 +250,7 @@ export default function Home() {
             <h2 className="text-center font-display text-[38px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22]">
               Our Work
             </h2>
-            <div className="mt-10 grid gap-0 overflow-hidden border border-[#e7e1da] lg:grid-cols-4">
+            <div className="mt-10 grid gap-0 overflow-hidden border border-transparent lg:grid-cols-4">
               {[
                 work1,
                 work2,
@@ -244,7 +263,7 @@ export default function Home() {
               ].map((image, index) => (
                 <div
                   key={`work-${index}`}
-                  className="relative aspect-[4/3] w-full border border-[#e7e1da]"
+                  className="relative aspect-[4/3] w-full border border-transparent"
                 >
                   <Image
                     src={image}

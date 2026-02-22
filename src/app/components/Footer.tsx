@@ -40,9 +40,9 @@ export default function Footer() {
             <Image
               src={logo}
               alt="JM Quality Construction"
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
-            <p className="mt-6 max-w-sm text-[16px] leading-none text-white/80 font-body">
+            <p className="mt-6 max-w-sm text-[16px] leading-[1.2] text-white/80 font-body">
               Whether you need modular installation, framing solutions or
               oversized-load transportation, our team is ready to assist.
             </p>
@@ -52,7 +52,7 @@ export default function Footer() {
             <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Contact
             </p>
-            <div className="mt-6 w-fit space-y-4 text-[16px] leading-none text-white/85 font-body mx-auto">
+            <div className="mt-6 w-fit space-y-4 text-[16px] leading-[1.2] text-white/85 font-body mx-auto">
               {contactItems.map((item) => {
                 return (
                   <div
@@ -77,11 +77,11 @@ export default function Footer() {
             <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Links
             </p>
-            <ul className="mt-6 space-y-3 text-[16px] leading-none text-white/85 font-body">
+            <ul className="mt-6 space-y-3 text-[16px] leading-[1.2] text-white/85 font-body">
               {quickLinks.map((item) => (
                 <li key={item.label}>
                   <a
-                    className="group flex items-center gap-3 font-body"
+                    className="group flex items-center gap-3 font-body transition-colors hover:text-[var(--brand-gold)]"
                     href={item.href}
                   >
                     <span className="transition group-hover:translate-x-1">
@@ -102,10 +102,13 @@ export default function Footer() {
             <p className="relative inline-block font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-[var(--brand-gold-soft)] after:mt-2 after:block after:h-[2px] after:w-8 after:bg-[var(--brand-gold-soft)]">
               Services
             </p>
-            <ul className="mt-6 space-y-3 text-[16px] leading-none text-white/85 font-body">
+            <ul className="mt-6 space-y-3 text-[16px] leading-[1.2] text-white/85 font-body">
               {services.map((item) => (
                 <li key={item}>
-                  <a className="group flex items-center gap-3 font-body" href="#">
+                  <a
+                    className="group flex items-center gap-3 font-body transition-colors hover:text-[var(--brand-gold)]"
+                    href="#"
+                  >
                     <span className="transition group-hover:translate-x-1">
                       <Image
                         src={arrowIcon}
@@ -121,7 +124,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/15 pt-6 font-body text-[16px] font-normal leading-none tracking-[0] text-white/70">
+        <div className="mt-12 border-t border-white/15 pt-6 font-body text-[16px] font-normal leading-[1.2] tracking-[0] text-white/70">
           &copy;2023 JM Quality Construction. All Rights Reserved
         </div>
       </div>

@@ -27,7 +27,7 @@ export default function Header() {
             {primaryLinks.map((link) => (
               <a
                 key={link}
-                className="text-center transition hover:text-white/80"
+                className="text-center transition-colors hover:text-[var(--brand-dark)]"
                 href="#"
               >
                 {link}
@@ -48,7 +48,7 @@ export default function Header() {
           {secondaryLinks.map((link) => (
             <a
               key={link}
-              className="text-center transition hover:text-white/80 first:ml-10"
+              className="text-center transition-colors hover:text-[var(--brand-gold)] first:ml-10"
               href="#"
             >
               {link}

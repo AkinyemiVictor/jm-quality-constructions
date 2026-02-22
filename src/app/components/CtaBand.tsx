@@ -6,7 +6,7 @@ export default function CtaBand() {
           <p className="font-display text-[24px] font-bold uppercase leading-[26px] tracking-[0] text-white">
             Get Your Project Moving
           </p>
-          <p className="mt-3 text-[16px] leading-none text-white/90 font-body">
+          <p className="mt-3 text-[16px] leading-[1.2] text-white/90 font-body">
             For modular installation, expert framing or reliable transportation
             services, JM Quality Construction delivers efficient, forward-thinking
             solutions backed by decades of experience.
