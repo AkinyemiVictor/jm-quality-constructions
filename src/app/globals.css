@@ -56,8 +56,22 @@ a {
   margin-left: auto;
 }
 
+.line-clamp-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 @media (max-width: 525px) {
-  .hamburger-menu {
+  .nav-links.angled-nav {
     display: none !important;
   }
 }

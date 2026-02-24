@@ -1,9 +1,9 @@
-import work1 from "../assets/work/our-work-1.png";
-import work2 from "../assets/work/our-work-2.png";
-import work3 from "../assets/work/our-work-3.png";
-import work4 from "../assets/work/our-work-4.png";
-import work5 from "../assets/work/our-work-5.png";
-import work6 from "../assets/work/our-work-6.png";
+﻿import blog1 from "../assets/blog/blog pic01.jpg";
+import blog2 from "../assets/blog/blog pic02.jpg";
+import blog3 from "../assets/blog/blog pic03.jpg";
+import blog5 from "../assets/blog/blog pic05.jpg";
+import blog6 from "../assets/blog/blog pic06.jpg";
+import blog7 from "../assets/blog/blog pic07.jpg";
 
 export type NewsSection = {
   title: string;
@@ -16,7 +16,7 @@ export type NewsPost = {
   excerpt: string;
   date: string;
   category: string;
-  image: typeof work1;
+  image: typeof blog1;
   sections: NewsSection[];
 };
 
@@ -25,29 +25,30 @@ export const newsPosts: NewsPost[] = [
     slug: "project-spotlight-modular-set-completed",
     title: "Project Spotlight: Modular Set Completed",
     excerpt:
-      "A recent modular install in northern Indiana highlights our focus on safe, efficient placement and finish coordination.",
+      "A recent modular set in northern Indiana highlights our focus on safety, sequencing, and clean finish coordination.",
     date: "June 12, 2024",
     category: "Project Update",
-    image: work1,
+    image: blog3,
     sections: [
       {
-        title: "Overview",
+        title: "Project Scope",
         body: [
-          "Our crew completed a two-module set for a residential client in Millersburg, Indiana. The project required precise crane placement, tight street access, and close coordination with local utilities.",
-          "By staging the delivery in advance and pre-planning the lift sequence, we reduced on-site downtime and kept the schedule aligned with the builder’s interior finish timeline.",
+          "This project included transport, crane set, structural tie-in, and weatherproofing for a two-piece residential modular home in Millersburg, Indiana.",
+          "Because the site had limited approach room and nearby utility lines, we finalized a detailed placement plan before delivery day to avoid delays and rework.",
         ],
       },
       {
-        title: "What Went Right",
+        title: "Execution and Timeline",
         body: [
-          "A pre-lift walk-through with the transportation team ensured clear turn paths and safe positioning for the set. We also coordinated with the foundation team to confirm anchor placement and tolerances.",
-          "The modules were secured, leveled, and weather-sealed the same day, allowing follow-on trades to begin without delay.",
+          "Our transportation and set crews staged arrivals in sequence so each module moved directly from delivery to lift position with minimal idle time.",
+          "Both modules were leveled, fastened, and sealed the same day, allowing interior finish teams to begin on schedule the next morning.",
         ],
       },
       {
-        title: "Next Steps",
+        title: "Outcome",
         body: [
-          "We are preparing the framing and trim package for the interior crew, along with a final inspection checklist to keep quality consistent across all phases.",
+          "Final trim and punch coordination were completed with the builder using a closeout checklist focused on alignment, moisture control, and connection quality.",
+          "The client received a clean handoff with no critical corrections, keeping the overall build timeline intact.",
         ],
       },
     ],
@@ -56,23 +57,30 @@ export const newsPosts: NewsPost[] = [
     slug: "fleet-update-oversized-haul-upgrades",
     title: "Fleet Update: Oversized Haul Upgrades",
     excerpt:
-      "New transport equipment helps us move large modules with improved scheduling and on-site turnaround.",
+      "Recent transportation upgrades improve load stability, route flexibility, and on-site turnaround for oversized modules.",
     date: "May 28, 2024",
     category: "Transportation",
-    image: work2,
+    image: blog5,
     sections: [
       {
-        title: "Why It Matters",
+        title: "What Was Added",
         body: [
-          "Oversized load transportation is a critical part of modular installation. We’ve upgraded several trailers and securing systems to better handle larger modules and tighter delivery windows.",
-          "These updates improve routing flexibility, reduce repositioning time at the jobsite, and help us keep projects moving on schedule.",
+          "We upgraded key hauling equipment, including reinforced tie-down configurations, improved lighting, and updated trailer hardware for oversized module movement.",
+          "These changes give our crews better control during loading, transport, and final placement staging.",
         ],
       },
       {
-        title: "Upgrades Included",
+        title: "Operational Impact",
         body: [
-          "We added enhanced tie-down points, improved lighting for early-morning staging, and updated escort coordination to meet multi-county permit requirements.",
-          "The improvements also make it easier to stage modules in complex urban or rural sites with limited access.",
+          "The updated setup shortens turnaround at delivery sites by reducing repositioning steps and improving crane-ready module alignment.",
+          "Permit routing is also smoother across multi-county deliveries because escorts, timing, and route clearances can be planned with tighter accuracy.",
+        ],
+      },
+      {
+        title: "Safety and Compliance",
+        body: [
+          "Each upgraded unit now follows revised pre-trip checks for securement, lighting, and permit verification before dispatch.",
+          "This keeps compliance consistent and lowers risk during long-haul and restricted-access moves.",
         ],
       },
     ],
@@ -81,23 +89,30 @@ export const newsPosts: NewsPost[] = [
     slug: "framing-crew-expands-for-spring-builds",
     title: "Framing Crew Expands for Spring Builds",
     excerpt:
-      "We are adding skilled carpenters to meet demand for residential and commercial framing projects.",
+      "We are expanding framing capacity to meet spring demand across residential and light commercial projects.",
     date: "April 18, 2024",
     category: "Framing",
-    image: work3,
+    image: blog7,
     sections: [
       {
-        title: "Meeting Demand",
+        title: "Team Expansion Plan",
         body: [
-          "The spring schedule is filling up fast, so we’re expanding our framing team to keep quality high and timelines tight.",
-          "New crew members bring experience in panelized, stick-built, and metal framing systems.",
+          "Our spring pipeline includes overlapping starts, so we added experienced foremen and carpenters to support parallel framing schedules.",
+          "New team members bring practical field experience in wood framing, panelized systems, and mixed structural layouts.",
         ],
       },
       {
-        title: "How This Helps Clients",
+        title: "Training and Standards",
         body: [
-          "More crews mean faster mobilization, tighter sequencing with other trades, and fewer delays due to labor constraints.",
-          "We’re also investing in safety training to keep job sites productive and compliant.",
+          "Every incoming crew member completes our safety and quality onboarding process before joining active jobs.",
+          "That includes layout verification, fastening standards, framing tolerance checks, and daily production reporting.",
+        ],
+      },
+      {
+        title: "Capacity Gains for Clients",
+        body: [
+          "With larger crews, we can mobilize faster and maintain schedule continuity when projects shift phases.",
+          "Clients benefit from shorter wait times, tighter trade coordination, and more predictable framing completion dates.",
         ],
       },
     ],
@@ -106,22 +121,30 @@ export const newsPosts: NewsPost[] = [
     slug: "safety-first-coordination-on-multi-site-jobs",
     title: "Safety-First Coordination on Multi-Site Jobs",
     excerpt:
-      "Our team continues to refine staging, permits, and site logistics to keep projects on track.",
+      "Our multi-site workflow now uses tighter planning, communication, and safety controls to keep projects moving with fewer disruptions.",
     date: "March 22, 2024",
     category: "Operations",
-    image: work4,
+    image: blog1,
     sections: [
       {
-        title: "Smarter Staging",
+        title: "Site Readiness Workflow",
         body: [
-          "Multi-site projects require careful planning across permits, traffic control, and on-site staging. We’ve refined our checklists to reduce risk and keep crews aligned.",
-          "Each site now receives a pre-arrival briefing covering lift points, access routes, and safety procedures.",
+          "Each project now goes through a structured readiness review covering access paths, lift zones, traffic flow, and emergency response points.",
+          "We complete this review before crews mobilize so site conditions and responsibilities are clear before work begins.",
         ],
       },
       {
-        title: "Consistent Communication",
+        title: "Daily Coordination Cadence",
         body: [
-          "We coordinate daily with builders, inspectors, and transportation partners to reduce surprises and keep workflows steady.",
+          "Field leads run daily briefings with builders, transportation teams, and trade partners to confirm sequence, hazards, and handoff timing.",
+          "That routine reduces last-minute changes and keeps crews aligned across multiple active locations.",
+        ],
+      },
+      {
+        title: "Risk Reduction Results",
+        body: [
+          "With standardized checklists and communication points, we have reduced preventable site interruptions and improved schedule reliability.",
+          "Most importantly, crews maintain safer working conditions while still meeting production targets.",
         ],
       },
     ],
@@ -130,22 +153,30 @@ export const newsPosts: NewsPost[] = [
     slug: "residential-install-timeline-milestones",
     title: "Residential Install Timeline Milestones",
     excerpt:
-      "From foundation prep to final placement, see how we streamline modular home installs.",
+      "From foundation prep through final tie-in, this timeline shows how we keep residential installs predictable and efficient.",
     date: "February 9, 2024",
     category: "Residential",
-    image: work5,
+    image: blog6,
     sections: [
       {
-        title: "Preparation",
+        title: "Pre-Set Milestones",
         body: [
-          "We start with a detailed site review, confirming foundation dimensions, crane access, and local permit requirements.",
-          "Utilities are coordinated early to minimize conflicts during set day.",
+          "Before delivery, we verify foundation dimensions, anchor locations, access clearances, and crane setup points against approved plans.",
+          "Utility coordination is completed early so electrical, plumbing, and service tie-ins do not delay set-day progress.",
         ],
       },
       {
-        title: "Set Day Execution",
+        title: "Set-Day Sequence",
         body: [
-          "Modules arrive staged and ready for lift. Our crew secures the placement quickly, seals the structure, and confirms leveling before handoff.",
+          "Modules are delivered in lift order, set into place, and aligned to tolerance before structural fastening begins.",
+          "Our team then completes weather sealing and confirms level conditions across key interior reference points.",
+        ],
+      },
+      {
+        title: "Post-Set Handoff",
+        body: [
+          "After placement, we walk the builder through a closeout checklist covering connections, sealing, and readiness for finish trades.",
+          "This handoff process supports clean inspections and keeps the remaining build phases on schedule.",
         ],
       },
     ],
@@ -154,22 +185,30 @@ export const newsPosts: NewsPost[] = [
     slug: "commercial-framing-progress-update",
     title: "Commercial Framing Progress Update",
     excerpt:
-      "A fast-paced build shows how our framing partners accelerate timelines without sacrificing quality.",
+      "This commercial framing update shows how disciplined sequencing keeps production high without sacrificing quality control.",
     date: "January 30, 2024",
     category: "Commercial",
-    image: work6,
+    image: blog2,
     sections: [
       {
-        title: "On-Site Highlights",
+        title: "Current Progress Snapshot",
         body: [
-          "This commercial project moved from foundation to full framing in weeks thanks to coordinated material delivery and clear sequencing.",
-          "Our crew worked closely with the general contractor to align inspections and reduce downtime.",
+          "The project has advanced from slab and structural layout into active wall and roof framing, with multiple zones running in parallel.",
+          "Material deliveries are timed by area to keep crews productive and reduce congestion on site.",
         ],
       },
       {
-        title: "Quality Controls",
+        title: "Coordination with Trades",
         body: [
-          "We continue to check alignment, fastener schedules, and structural connections at each phase to maintain high standards.",
+          "We coordinate daily with the general contractor and MEP teams to maintain clear access for inspections and upcoming rough-ins.",
+          "That coordination keeps framing progress aligned with the broader construction schedule.",
+        ],
+      },
+      {
+        title: "Quality Assurance",
+        body: [
+          "Supervisors perform routine checks for layout accuracy, fastening patterns, and structural connection details at each completed phase.",
+          "These controls help us deliver consistent framing quality while maintaining schedule momentum.",
         ],
       },
     ],

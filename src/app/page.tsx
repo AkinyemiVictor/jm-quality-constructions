@@ -1,7 +1,8 @@
-import CtaBand from "./components/CtaBand";
+﻿import CtaBand from "./components/CtaBand";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Image from "next/image";
+import Link from "next/link";
 import heroImage from "./assets/hero/image-bg.png";
 import iconStars from "./assets/icons/splashing-star.png";
 import iconClock from "./assets/icons/moving-clock.png";
@@ -25,7 +26,7 @@ export default function Home() {
     <div className="min-h-screen bg-[var(--brand-deep)] text-[var(--brand-cream)]">
       <Header />
       <main>
-        <section className="relative aspect-[1512/673] w-full overflow-hidden text-white">
+        <section className="relative h-[360px] w-full overflow-hidden text-white sm:h-[470px] lg:h-[673px]">
           <Image
             src={heroImage}
             alt="JM Quality Construction exterior"
@@ -34,26 +35,26 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/15 to-black/35" />
-          <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-16 pt-10 lg:px-10">
-            <h1 className="font-display text-[100px] font-bold uppercase leading-[90px] tracking-[-0.02em] drop-shadow-md">
+          <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-10 pt-10 sm:pb-12 lg:px-10 lg:pb-16">
+            <h1 className="font-display text-[58px] font-bold uppercase leading-[0.88] tracking-[-0.02em] drop-shadow-md sm:text-[78px] lg:text-[100px] lg:leading-[90px]">
               JM Quality Construction
             </h1>
-            <p className="mt-3 max-w-[640px] text-[19px] leading-[1.15] text-white/90">
+            <p className="mt-3 max-w-[640px] text-[16px] leading-[1.2] text-white/90 sm:text-[18px] lg:text-[19px]">
               At JM Quality Construction, we specialize in modular installation,
               transportation and framing for commercial and residential projects.
             </p>
-            <a
+            <Link
               className="mt-5 inline-flex min-w-[170px] items-center justify-center bg-[var(--brand-gold)] px-6 py-3 text-[18px] font-extrabold leading-none tracking-[0] text-white shadow-[0_10px_24px_rgba(0,0,0,0.25)] transition hover:bg-[var(--brand-gold-soft)]"
-              href="#"
+              href="/services"
             >
               Our Services
-            </a>
+            </Link>
           </div>
         </section>
         <section className="bg-white text-[#3a2b22]">
           <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10 lg:py-20">
             <div className="text-center">
-              <h2 className="font-display text-[60px] font-bold uppercase leading-none tracking-[0]">
+              <h2 className="font-display text-[42px] font-bold uppercase leading-none tracking-[0] sm:text-[52px] lg:text-[60px]">
                 Full-Service Modular Installation,
                 <br />
                 Framing &amp; Transportation
@@ -67,7 +68,7 @@ export default function Home() {
                 reliability needed to get the job done right.
               </p>
               <p className="mx-auto mt-3 max-w-3xl text-[16px] leading-[1.2] text-[#6d6057]">
-                With decades of industry experience, we’ve built a reputation
+                With decades of industry experience, we&apos;ve built a reputation
                 for delivering projects on schedule, minimizing downtime and
                 maintaining the highest standards of workmanship.
               </p>
@@ -84,6 +85,7 @@ export default function Home() {
                 {
                   title: "Commercial",
                   image: serviceCommercial,
+                  href: "/services/commercial",
                   description: (
                     <>
                       Turnkey solutions for developers and
@@ -95,6 +97,7 @@ export default function Home() {
                 {
                   title: "Residential",
                   image: serviceResidential,
+                  href: "/services/residential",
                   description: (
                     <>
                       Assembly and installation of custom
@@ -106,6 +109,7 @@ export default function Home() {
                 {
                   title: "Transportation",
                   image: serviceTransportation,
+                  href: "/services/transportation",
                   description: (
                     <>
                       Safe, reliable transport for oversized
@@ -117,6 +121,7 @@ export default function Home() {
                 {
                   title: "Framing",
                   image: serviceFraming,
+                  href: "/framing-projects",
                   description: (
                     <>
                       Stick-built, panelized and metal framing for
@@ -139,7 +144,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="px-6 py-6">
-                    <p className="font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
+                    <p className="font-display text-[22px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22] sm:text-[24px]">
                       {item.title}
                     </p>
                     <p className="relative mt-2 text-[16px] leading-[1.2] text-[#6d6057] font-link">
@@ -149,12 +154,12 @@ export default function Home() {
                       />
                       {item.description}
                     </p>
-                    <a
+                    <Link
                       className="mt-4 inline-flex w-fit items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
-                      href="#"
+                      href={item.href}
                     >
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -163,7 +168,7 @@ export default function Home() {
         </section>
         <section className="bg-[#f7efe3] text-[#3a2b22]">
           <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10 lg:py-20">
-            <h2 className="text-center font-display text-[38px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22]">
+            <h2 className="text-center font-display text-[34px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22] sm:text-[38px]">
               Why Choose JM Quality Construction?
             </h2>
             <div className="mt-12 grid gap-10 lg:grid-cols-2">
@@ -224,7 +229,7 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <p className="font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22]">
+                      <p className="font-display text-[22px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22] sm:text-[24px]">
                         {item.title}
                       </p>
                       <p className="mt-2 text-[16px] leading-[1.2] text-[#6d6057] font-link">
@@ -236,21 +241,21 @@ export default function Home() {
               })}
             </div>
             <div className="mt-12 flex justify-center">
-              <a
+              <Link
                 className="inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-3 text-[18px] font-extrabold leading-none tracking-[0] !text-white shadow-[0_10px_24px_rgba(0,0,0,0.15)] transition hover:bg-[var(--brand-gold-soft)]"
-                href="#"
+                href="/services"
               >
                 Explore Our Other Services
-              </a>
+              </Link>
             </div>
           </div>
         </section>
         <section className="bg-white text-[#3a2b22]">
           <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10 lg:py-20">
-            <h2 className="text-center font-display text-[38px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22]">
+            <h2 className="text-center font-display text-[34px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22] sm:text-[38px]">
               Our Work
             </h2>
-            <div className="mt-10 grid gap-0 overflow-hidden border border-transparent lg:grid-cols-4">
+            <div className="mt-10 grid gap-0 overflow-hidden border border-transparent sm:grid-cols-2 lg:grid-cols-4">
               {[
                 work1,
                 work2,
@@ -282,3 +287,5 @@ export default function Home() {
     </div>
   );
 }
+
+
