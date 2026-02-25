@@ -4,11 +4,11 @@ import CtaBand from "../components/CtaBand";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import heroImage from "../assets/hero/image-bg.png";
-import featureImage from "../assets/work/our-work-5.png";
-import iconStars from "../assets/icons/splashing-star.png";
-import iconClock from "../assets/icons/moving-clock.png";
-import iconPeople from "../assets/icons/men.png";
-import iconBuilding from "../assets/icons/cooperate-building.png";
+import featureImage from "../assets/modular experetise.png";
+import iconCommitment from "../assets/icons/commitment.png";
+import iconFraming from "../assets/icons/framing.png";
+import iconReliable from "../assets/icons/reliable.png";
+import iconSeamless from "../assets/icons/seamless.png";
 import work1 from "../assets/work/our-work-1.png";
 import work2 from "../assets/work/our-work-2.png";
 import work3 from "../assets/work/our-work-3.png";
@@ -22,22 +22,22 @@ const differentiators = [
   {
     title: "Seamless Modular Installation",
     description: "Complete residential and commercial modular home sets",
-    icon: iconBuilding,
+    icon: iconSeamless,
   },
   {
     title: "Framing & General Contracting",
     description: "Stick-built, panelized, and metal framing solutions",
-    icon: iconPeople,
+    icon: iconFraming,
   },
   {
     title: "Reliable Transportation",
     description: "Oversized load transport, permitting, and on-site coordination",
-    icon: iconClock,
+    icon: iconReliable,
   },
   {
     title: "Commitment to Efficiency & Quality",
     description: "On time, professional, and always project-focused",
-    icon: iconStars,
+    icon: iconCommitment,
   },
 ];
 
@@ -83,11 +83,11 @@ export default function AboutPage() {
                 />
               </div>
 
-              <div>
-                <h2 className="font-display text-[40px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[54px] lg:text-[64px]">
+              <div className="max-w-[560px]">
+                <h2 className="font-display text-[32px] font-bold uppercase leading-[1] tracking-[0] text-[#2f241d]">
                   Modular Expertise. Quality Craftsmanship. Trusted Partnerships.
                 </h2>
-                <div className="mt-4 space-y-4 text-[16px] leading-[1.3] text-[#6d6057] font-body">
+                <div className="mt-5 space-y-5 text-[16px] leading-[1.35] text-[#6d6057] font-body">
                   <p>
                     At JM Quality Construction, we specialize in modular
                     installation, framing and transportation, serving
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 </div>
                 <Link
                   href="/contact"
-                  className="mt-6 inline-flex items-center justify-center bg-[var(--brand-gold)] px-8 py-3 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
+                  className="mt-7 inline-flex items-center justify-center bg-[var(--brand-gold)] px-8 py-3 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
                 >
                   Tell Us About Your Project
                 </Link>
