@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--brand-dark)] text-[var(--brand-cream)]">
       <div className="mx-auto w-full max-w-6xl px-6 py-14 lg:px-10">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.9fr_0.7fr_0.9fr]">
+        <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-20 lg:grid-cols-[1.2fr_0.9fr_0.7fr_0.9fr] lg:gap-x-12">
           <div>
             <Image
               src={logo}

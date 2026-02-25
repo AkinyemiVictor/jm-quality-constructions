@@ -38,7 +38,7 @@ const serviceCards: ServiceCard[] = [
   {
     title: "Framing",
     description:
-      "Stick-built, panelized and metal framing for residential and commercial builds",
+      "Site-built and modular framing for residential and commercial builds",
     image: serviceFraming,
     href: "/framing-projects",
   },

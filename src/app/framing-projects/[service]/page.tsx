@@ -213,7 +213,7 @@ export default async function FramingDetailPage({
                 className="mt-6 inline-flex items-center justify-center bg-[#d7d7d7] px-5 py-2.5 text-[17px] font-semibold leading-none !text-[#29211c] transition hover:bg-[#cbcbcb]"
                 href="/services"
               >
-                Explore Our Other Services
+                Explore Our Services
               </Link>
             </div>
 

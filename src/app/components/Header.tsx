@@ -26,15 +26,15 @@ export default function Header() {
   return (
     <header className="relative z-20 bg-[var(--brand-gold)] text-[var(--brand-cream)]">
       <div className="mx-auto w-full max-w-6xl px-6 lg:px-10">
-        <div className="relative flex flex-wrap items-center justify-between gap-6 pb-9 pt-6 lg:flex-nowrap">
+        <div className="relative flex flex-wrap items-center justify-between gap-6 pb-9 pt-6 min-[1048px]:flex-nowrap">
           <Image
             src={logo}
             alt="JM Quality Construction"
-            className="h-16 w-auto"
+            className="h-16 w-auto max-[868px]:h-12"
             priority
           />
 
-          <nav className="nav-primary hidden flex-1 items-center justify-end gap-8 text-[24px] leading-[26px] font-normal uppercase tracking-[0] text-[var(--brand-cream)] lg:flex">
+          <nav className="nav-primary hidden flex-1 items-center justify-end gap-8 text-[24px] leading-[26px] font-normal uppercase tracking-[0] text-[var(--brand-cream)] min-[1048px]:flex">
             {primaryLinks.map((link) => (
               <Link
                 key={link.label}
@@ -48,19 +48,19 @@ export default function Header() {
 
           <button
             type="button"
-            className="hamburger-menu inline-flex items-center gap-3 text-xs uppercase tracking-[0.26em] lg:hidden"
+            className="hamburger-menu inline-flex items-center gap-3 text-[24px] leading-none uppercase tracking-[0.26em] min-[1048px]:hidden max-[868px]:gap-2 max-[868px]:text-[18px]"
             aria-expanded={menuOpen}
             aria-label="Toggle navigation menu"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
-            <span className="h-2 w-2 rotate-45 bg-[var(--brand-cream)]" />
+            <span className="h-4 w-4 rotate-45 bg-[var(--brand-cream)] max-[868px]:h-3 max-[868px]:w-3" />
             <span>{menuOpen ? "Close" : "Menu"}</span>
           </button>
         </div>
       </div>
 
       {menuOpen && (
-        <div className="border-t border-white/15 bg-[var(--brand-dark)] lg:hidden">
+        <div className="border-t border-white/15 bg-[var(--brand-dark)] min-[1048px]:hidden">
           <div className="mx-auto grid w-full max-w-6xl gap-1 px-6 py-4">
             {primaryLinks.map((link) => (
               <Link
@@ -88,7 +88,7 @@ export default function Header() {
       )}
 
       <div className="pointer-events-none absolute bottom-0 left-0 z-30 w-full">
-        <div className="nav-links angled-nav pointer-events-auto absolute right-0 top-0 hidden h-[40px] w-[600px] translate-y-1/2 items-center gap-8 bg-[var(--brand-dark)] px-8 text-[16px] leading-none font-normal tracking-[0] text-[var(--brand-cream)] shadow-[0_12px_30px_rgba(0,0,0,0.35)] lg:flex">
+        <div className="nav-links angled-nav pointer-events-auto absolute right-0 top-0 hidden h-[40px] w-[600px] translate-y-1/2 items-center gap-8 bg-[var(--brand-dark)] px-8 text-[16px] leading-none font-normal tracking-[0] text-[var(--brand-cream)] shadow-[0_12px_30px_rgba(0,0,0,0.35)] min-[1048px]:flex">
           <span className="h-2.5 w-2.5 rotate-45 bg-white" />
           {secondaryLinks.map((link) => (
             <Link

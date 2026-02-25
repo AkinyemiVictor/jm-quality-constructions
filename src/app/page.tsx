@@ -80,7 +80,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-14 grid gap-8 lg:grid-cols-2">
+            <div className="mt-14 grid gap-8 md:grid-cols-2">
               {[
                 {
                   title: "Commercial",
@@ -124,7 +124,7 @@ export default function Home() {
                   href: "/framing-projects",
                   description: (
                     <>
-                      Stick-built, panelized and metal framing for
+                      Site-built and modular framing for
                       <br />
                       residential and commercial builds
                     </>
@@ -171,56 +171,37 @@ export default function Home() {
             <h2 className="text-center font-display text-[34px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22] sm:text-[38px]">
               Why Choose JM Quality Construction?
             </h2>
-            <div className="mt-12 grid gap-10 lg:grid-cols-2">
+            <div className="mt-12 grid gap-10 md:grid-cols-2">
               {[
                 {
                   title: "Decades of Experience",
-                  description: (
-                    <>
-                      A team with over 80 years of combined
-                      <br />
-                      industry expertise
-                    </>
-                  ),
+                  description: "A team with over 80 years of combined industry expertise",
                   icon: iconStars,
                 },
                 {
                   title: "Proven Efficiency",
-                  description: (
-                    <>
-                      We show up on time, ready to work and get
-                      <br />
-                      the job done right the first time
-                    </>
-                  ),
+                  description:
+                    "We show up on time, ready to work and get the job done right the first time",
                   icon: iconClock,
                 },
                 {
                   title: "Comprehensive Coordination",
-                  description: (
-                    <>
-                      Handling permits, planning and site
-                      <br />
-                      logistics for smooth execution
-                    </>
-                  ),
+                  description: "Handling permits, planning and site logistics for smooth execution",
                   icon: iconPeople,
                 },
                 {
                   title: "Trusted by Builders & Developers",
-                  description: (
-                    <>
-                      From local builds to remote commercial
-                      <br />
-                      projects, we bring reliability to every job
-                    </>
-                  ),
+                  description:
+                    "From local builds to remote commercial projects, we bring reliability to every job",
                   icon: iconBuilding,
                 },
               ].map((item) => {
                 const iconSrc = item.icon;
                 return (
-                  <div key={item.title} className="flex items-center gap-6">
+                  <div
+                    key={item.title}
+                    className="flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:gap-6 md:text-left"
+                  >
                     <div className="flex aspect-square h-28 w-28 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)]">
                       <Image
                         src={iconSrc}
@@ -228,7 +209,7 @@ export default function Home() {
                         className="h-16 w-16 object-contain"
                       />
                     </div>
-                    <div>
+                    <div className="max-w-[520px]">
                       <p className="font-display text-[22px] font-normal uppercase leading-[26px] tracking-[0] text-[#3a2b22] sm:text-[24px]">
                         {item.title}
                       </p>
@@ -245,7 +226,7 @@ export default function Home() {
                 className="inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-3 text-[18px] font-extrabold leading-none tracking-[0] !text-white shadow-[0_10px_24px_rgba(0,0,0,0.15)] transition hover:bg-[var(--brand-gold-soft)]"
                 href="/services"
               >
-                Explore Our Other Services
+                Explore Our Services
               </Link>
             </div>
           </div>
