@@ -70,7 +70,7 @@ export default function FramingProjectsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/75" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-8 lg:px-10 lg:pb-11">
-            <h1 className="font-display text-[46px] font-bold uppercase leading-[0.9] tracking-[0] sm:text-[66px] lg:text-[86px]">
+            <h1 className="font-display text-[58px] font-bold uppercase leading-[0.9] tracking-[-0.02em] sm:text-[76px] lg:text-[100px]">
               Framing Projects
             </h1>
             <p className="mt-2 text-sm font-body text-white/80">
@@ -86,8 +86,8 @@ export default function FramingProjectsPage() {
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 py-14 lg:px-10 lg:py-16">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="font-display text-[38px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[54px] lg:text-[70px]">
-                Expert Framing Solutions For Any Build
+              <h2 className="text-center font-display text-[60px] font-bold leading-[1] tracking-[0] text-[#2f241d]">
+                Expert Framing Solutions for Any Build
               </h2>
               <p className="mx-auto mt-5 max-w-3xl text-[16px] leading-[1.3] text-[#6d6057] font-body">
                 Strong, precise framing is the foundation of every well-built
@@ -130,7 +130,7 @@ export default function FramingProjectsPage() {
                     <div className="grid gap-5 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-8">
                       <div>
                         <Link href={service.href}>
-                          <h3 className="font-display text-[32px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] transition-colors hover:text-[var(--brand-gold)] sm:text-[40px] lg:text-[44px]">
+                          <h3 className="font-display text-[32px] font-bold leading-[1] tracking-[0] text-[#2f241d] transition-colors hover:text-[var(--brand-gold)]">
                             {service.title}
                           </h3>
                         </Link>
@@ -138,7 +138,7 @@ export default function FramingProjectsPage() {
                           {service.description}
                         </p>
                         <Link
-                          className="mt-4 inline-flex items-center gap-2 text-[22px] font-display uppercase leading-none tracking-[0] text-[var(--brand-gold)] transition hover:text-[var(--brand-gold-soft)] sm:text-[26px] lg:text-[28px]"
+                          className="mt-4 inline-flex h-[21px] w-[119px] items-center justify-start gap-2 font-display text-[21px] font-bold uppercase leading-[1] tracking-[0] text-[var(--brand-gold)] transition hover:text-[var(--brand-gold-soft)]"
                           href={service.href}
                         >
                           Learn More <span aria-hidden="true">-&gt;</span>

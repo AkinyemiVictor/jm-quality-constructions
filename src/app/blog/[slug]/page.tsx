@@ -43,7 +43,7 @@ export default async function BlogDetailPage({
             </p>
           </div>
 
-          <div className="pointer-events-none absolute inset-x-0 top-full z-10 -translate-y-16 lg:-translate-y-20">
+          <div className="pointer-events-none absolute inset-x-0 top-full z-10">
             <div className="mx-auto w-full max-w-6xl px-6 lg:px-10">
               <div className="relative aspect-[16/7] w-full overflow-hidden bg-[#8b8b8b] shadow-[0_8px_22px_rgba(20,12,8,0.14)]">
                 <Image src={post.image} alt={post.title} fill className="object-cover" />
@@ -56,7 +56,7 @@ export default async function BlogDetailPage({
           <div className="mx-auto w-full max-w-6xl px-6 pb-16 pt-0 lg:px-10 lg:pb-20">
             <div className="aspect-[16/7] w-full" aria-hidden />
 
-            <div className="mt-6 flex flex-wrap items-center gap-3 text-[12px] uppercase tracking-[0.22em] text-[#7b6d63] font-body">
+            <div className="mt-3 flex flex-wrap items-center gap-3 text-[12px] uppercase tracking-[0.22em] text-[#7b6d63] font-body">
               <span>{post.category}</span>
               <span className="h-1 w-1 rounded-full bg-[#c9b69a]" aria-hidden />
               <span>{post.date}</span>

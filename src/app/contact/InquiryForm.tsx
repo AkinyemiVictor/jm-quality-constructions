@@ -19,12 +19,12 @@ export default function InquiryForm() {
   return (
     <>
       <div className="mt-9 border-b border-[var(--brand-gold)]">
-        <div className="flex flex-wrap items-end gap-2">
+        <div className="flex flex-wrap items-end gap-2.5">
           <button
             type="button"
             aria-pressed={activeTab === "general"}
             onClick={() => setActiveTab("general")}
-            className={`w-full px-5 py-3 text-left font-display text-[18px] uppercase leading-none tracking-[0] transition sm:w-auto sm:text-[24px] ${
+            className={`w-full px-4 py-3 text-left font-display text-[16px] uppercase leading-[1.05] tracking-[0] transition sm:px-5 sm:text-[18px] md:w-auto lg:text-[24px] ${
               activeTab === "general"
                 ? "border border-[var(--brand-gold)] border-b-0 bg-[#efefef] text-[#2f241d]"
                 : "text-[#9d9488] hover:text-[#6f665c]"
@@ -36,7 +36,7 @@ export default function InquiryForm() {
             type="button"
             aria-pressed={activeTab === "transportation"}
             onClick={() => setActiveTab("transportation")}
-            className={`w-full px-5 py-3 text-left font-display text-[18px] uppercase leading-none tracking-[0] transition sm:w-auto sm:text-[24px] ${
+            className={`w-full px-4 py-3 text-left font-display text-[16px] uppercase leading-[1.05] tracking-[0] transition sm:px-5 sm:text-[18px] md:w-auto lg:text-[24px] ${
               activeTab === "transportation"
                 ? "border border-[var(--brand-gold)] border-b-0 bg-[#efefef] text-[#2f241d]"
                 : "text-[#9d9488] hover:text-[#6f665c]"
@@ -54,7 +54,7 @@ export default function InquiryForm() {
 
 function GeneralInquiryForm() {
   return (
-    <form className="mx-auto mt-10 max-w-3xl space-y-4">
+    <form className="mx-auto mt-10 w-full max-w-3xl space-y-4">
       <div>
         <label className={labelClassName} htmlFor="fullName">
           Full Name
@@ -119,16 +119,16 @@ function GeneralInquiryForm() {
         <p className={hintClassName}>
           Blueprints, drawings, or site plans - accepted formats: PDF, DWG, DXF, STEP, VRML
         </p>
-        <div className="mt-2 grid gap-3 sm:grid-cols-[1fr_auto]">
+        <div className="mt-2 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto]">
           <input
             id="projectFiles"
             name="projectFiles"
             type="file"
-            className="h-12 w-full border border-[#b9b2a8] bg-white px-3 py-2 text-[15px] text-[#3a2b22] file:mr-4 file:border-0 file:bg-[#efefef] file:px-3 file:py-1.5 file:text-[14px] file:font-medium file:text-[#3a2b22]"
+            className="h-12 min-w-0 w-full border border-[#b9b2a8] bg-white px-3 py-2 text-[15px] text-[#3a2b22] file:mr-4 file:border-0 file:bg-[#efefef] file:px-3 file:py-1.5 file:text-[14px] file:font-medium file:text-[#3a2b22]"
           />
           <button
             type="button"
-            className="inline-flex h-12 min-w-[122px] items-center justify-center bg-[#7f7f7f] px-5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[#6f6f6f]"
+            className="inline-flex h-12 min-w-[122px] w-full items-center justify-center bg-[#7f7f7f] px-5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[#6f6f6f] md:w-auto"
           >
             Upload
           </button>
@@ -137,7 +137,7 @@ function GeneralInquiryForm() {
 
       <button
         type="submit"
-        className="mt-2 inline-flex h-12 min-w-[138px] items-center justify-center bg-[var(--brand-gold)] px-7 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
+        className="mt-2 inline-flex h-12 min-w-[138px] w-full items-center justify-center bg-[var(--brand-gold)] px-7 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)] sm:w-auto"
       >
         Submit
       </button>
@@ -147,7 +147,7 @@ function GeneralInquiryForm() {
 
 function TransportationInquiryForm() {
   return (
-    <form className="mx-auto mt-10 max-w-3xl space-y-4">
+    <form className="mx-auto mt-10 w-full max-w-3xl space-y-4">
       <div>
         <label className={labelClassName} htmlFor="transportName">
           Full Name
@@ -167,7 +167,7 @@ function TransportationInquiryForm() {
         />
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         <div>
           <label className={labelClassName} htmlFor="transportEmail">
             Email
@@ -192,7 +192,7 @@ function TransportationInquiryForm() {
         </div>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         <div>
           <label className={labelClassName} htmlFor="pickupLocation">
             Pickup Location
@@ -229,7 +229,7 @@ function TransportationInquiryForm() {
         <input id="loadType" name="loadType" type="text" className={inputClassName} />
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         <div>
           <label className={labelClassName} htmlFor="loadDimensions">
             Load Dimensions
@@ -285,16 +285,16 @@ function TransportationInquiryForm() {
         <p className={hintClassName}>
           Attach permits, route sheets, drawings or shipment photos - PDF, DOC, JPG, PNG
         </p>
-        <div className="mt-2 grid gap-3 sm:grid-cols-[1fr_auto]">
+        <div className="mt-2 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto]">
           <input
             id="transportFiles"
             name="transportFiles"
             type="file"
-            className="h-12 w-full border border-[#b9b2a8] bg-white px-3 py-2 text-[15px] text-[#3a2b22] file:mr-4 file:border-0 file:bg-[#efefef] file:px-3 file:py-1.5 file:text-[14px] file:font-medium file:text-[#3a2b22]"
+            className="h-12 min-w-0 w-full border border-[#b9b2a8] bg-white px-3 py-2 text-[15px] text-[#3a2b22] file:mr-4 file:border-0 file:bg-[#efefef] file:px-3 file:py-1.5 file:text-[14px] file:font-medium file:text-[#3a2b22]"
           />
           <button
             type="button"
-            className="inline-flex h-12 min-w-[122px] items-center justify-center bg-[#7f7f7f] px-5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[#6f6f6f]"
+            className="inline-flex h-12 min-w-[122px] w-full items-center justify-center bg-[#7f7f7f] px-5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[#6f6f6f] md:w-auto"
           >
             Upload
           </button>
@@ -303,7 +303,7 @@ function TransportationInquiryForm() {
 
       <button
         type="submit"
-        className="mt-2 inline-flex h-12 min-w-[138px] items-center justify-center bg-[var(--brand-gold)] px-7 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
+        className="mt-2 inline-flex h-12 min-w-[138px] w-full items-center justify-center bg-[var(--brand-gold)] px-7 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)] sm:w-auto"
       >
         Submit
       </button>

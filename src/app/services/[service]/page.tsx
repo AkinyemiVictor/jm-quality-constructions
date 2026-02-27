@@ -3,10 +3,12 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import LightboxGallery from "../../components/LightboxGallery";
 import serviceCommercial from "../../assets/services/commercial.png";
 import serviceResidential from "../../assets/services/residential.png";
 import serviceTransportation from "../../assets/services/transportation.png";
 import serviceFraming from "../../assets/services/framing.png";
+import servicesHeroImage from "../../assets/services/services hero image.jpg";
 import work1 from "../../assets/work/our-work-1.png";
 import work2 from "../../assets/work/our-work-2.png";
 import work3 from "../../assets/work/our-work-3.png";
@@ -14,10 +16,19 @@ import work5 from "../../assets/work/our-work-5.png";
 import work6 from "../../assets/work/our-work-6.png";
 import work7 from "../../assets/work/our-work-7.png";
 import blogImage from "../../assets/blog/blog pic06.jpg";
+import iconTurnkey from "../../assets/icons/turnkey.png";
+import iconSitePreparation from "../../assets/icons/site prepearation.png";
+import iconExcavator from "../../assets/icons/excavator.png";
+import iconGarages from "../../assets/icons/garages.png";
+import iconCommitment from "../../assets/icons/commitment.png";
+import iconFraming from "../../assets/icons/framing.png";
+import iconReliable from "../../assets/icons/reliable.png";
+import iconSeamless from "../../assets/icons/seamless.png";
 
 type ServicePoint = {
   title: string;
   description: string;
+  icon?: StaticImageData;
 };
 
 type ServicePageData = {
@@ -45,18 +56,22 @@ const servicePages: Record<string, ServicePageData> = {
       {
         title: "Modular Commercial Installation",
         description: "Turnkey solutions for office buildings, retail spaces and more",
+        icon: iconSeamless,
       },
       {
         title: "General Contracting",
         description: "Complete oversight for all aspects of your construction project",
+        icon: iconFraming,
       },
       {
         title: "Interior Finishes",
         description: "High-quality work on interiors, exteriors, garages and porches",
+        icon: iconCommitment,
       },
       {
         title: "Subcontractor Management",
         description: "We coordinate the best local trades for specialized tasks",
+        icon: iconReliable,
       },
     ],
     introImage: serviceCommercial,
@@ -65,7 +80,7 @@ const servicePages: Record<string, ServicePageData> = {
   },
   residential: {
     heroTitle: "Residential Construction",
-    introTitle: "Quality Homes Built with Precision and Care",
+    introTitle: "Building Homes, Strengthening Communities",
     introParagraphs: [
       "JM Quality Construction offers residential construction services for homeowners, builders and developers who need dependable execution and lasting workmanship.",
       "From modular home installation and set work to structural framing and finishing support, our crew keeps each phase organized and aligned with your schedule.",
@@ -74,20 +89,24 @@ const servicePages: Record<string, ServicePageData> = {
     pointsTitle: "Our Residential Services",
     points: [
       {
-        title: "Modular Home Installation",
-        description: "Accurate set and placement for custom modular homes",
+        title: "Turnkey Modular Installation",
+        description: "Fast, efficient home setting within 90 minutes",
+        icon: iconTurnkey,
       },
       {
-        title: "Site Coordination",
-        description: "Smooth sequencing with builders, trades and inspectors",
+        title: "Site Preparation & Permitting",
+        description: "We handle building permits, site plans, and stakeouts",
+        icon: iconSitePreparation,
       },
       {
-        title: "Framing and Structural Work",
-        description: "Dependable stick-built and panelized framing support",
+        title: "Excavation & Foundations",
+        description: "Complete grading, well, septic, HVAC, and electrical services",
+        icon: iconExcavator,
       },
       {
-        title: "Finish and Completion Support",
-        description: "Detail-focused final work to keep your build moving",
+        title: "Garages, Porches & Pole Barns",
+        description: "Full residential add-ons and exterior finishing work",
+        icon: iconGarages,
       },
     ],
     introImage: serviceResidential,
@@ -106,18 +125,22 @@ const servicePages: Record<string, ServicePageData> = {
       {
         title: "Route Planning & Logistics",
         description: "Mapping the safest, most efficient transport routes",
+        icon: iconFraming,
       },
       {
         title: "Permit Handling & Compliance",
         description: "Securing all necessary state and local transport permits",
+        icon: iconCommitment,
       },
       {
         title: "Secure & Experienced Hauling",
         description: "Reliable transport by skilled drivers trained in oversized loads",
+        icon: iconReliable,
       },
       {
         title: "On-Site Delivery Coordination",
         description: "Providing a smooth arrival and setup at the project location",
+        icon: iconSeamless,
       },
     ],
     introImage: serviceTransportation,
@@ -173,6 +196,9 @@ export default async function ServiceDetailPage({
   }
 
   const page = servicePages[resolvedParams.service];
+  const usesIconPointsSection = ["residential", "commercial", "transportation"].includes(
+    resolvedParams.service,
+  );
 
   if (!page) {
     notFound();
@@ -182,21 +208,29 @@ export default async function ServiceDetailPage({
     <div className="min-h-screen bg-[var(--brand-deep)] text-[var(--brand-cream)]">
       <Header />
       <main className="bg-[#efefef] text-[#2f241d]">
-        <section className="mx-auto w-full max-w-6xl px-6 pb-8 pt-8 lg:px-10 lg:pb-10 lg:pt-10">
-          <div className="relative overflow-hidden bg-[#d5d5d5]">
-            <Image
-              src={page.introImage}
-              alt={page.heroTitle}
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-black/35" />
-            <div className="relative flex min-h-[240px] items-center justify-center px-6 text-center sm:min-h-[320px] lg:min-h-[380px]">
-              <h1 className="font-display text-[44px] font-bold uppercase leading-[0.9] tracking-[0] text-white sm:text-[62px] lg:text-[86px]">
-                {page.heroTitle}
-              </h1>
-            </div>
+        <section className="relative h-[250px] w-full overflow-hidden text-white sm:h-[310px] lg:h-[430px]">
+          <Image
+            src={servicesHeroImage}
+            alt={page.heroTitle}
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+          <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-8 lg:px-10 lg:pb-11">
+            <h1 className="font-display text-[44px] font-bold uppercase leading-[1] tracking-[0] text-white sm:text-[52px] lg:text-[60px]">
+              {page.heroTitle}
+            </h1>
+            <p className="mt-2 text-sm font-body text-white/80">
+              <Link className="transition-colors hover:text-white" href="/">
+                Home
+              </Link>{" "}
+              /{" "}
+              <Link className="transition-colors hover:text-white" href="/services">
+                Services
+              </Link>{" "}
+              / <span className="text-[var(--brand-gold)]">{page.heroTitle}</span>
+            </p>
           </div>
         </section>
 
@@ -212,7 +246,7 @@ export default async function ServiceDetailPage({
             </div>
 
             <div>
-              <h2 className="font-display text-[34px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[44px] lg:text-[58px]">
+              <h2 className="font-display text-[32px] font-bold leading-[1] tracking-[0] text-[#2f241d]">
                 {page.introTitle}
               </h2>
               <div className="mt-4 space-y-4 text-[16px] leading-[1.3] text-[#5f544c] font-body">
@@ -221,7 +255,7 @@ export default async function ServiceDetailPage({
                 ))}
               </div>
               <Link
-                className="mt-5 inline-flex items-center justify-center bg-[#d7d7d7] px-5 py-2.5 text-[17px] font-semibold leading-none !text-[#29211c] transition hover:bg-[#cbcbcb]"
+                className="mt-5 inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
                 href="/contact"
               >
                 Tell Us About Your Project
@@ -229,61 +263,92 @@ export default async function ServiceDetailPage({
             </div>
           </div>
 
-          <div className="mt-12 grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
-            <div>
-              <h3 className="font-display text-[32px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[42px] lg:text-[52px]">
+          {usesIconPointsSection ? (
+            <div className="mt-12 bg-[#ece7db] px-5 py-10 sm:px-8 lg:px-14 lg:py-12">
+              <h3 className="text-center font-display text-[36px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[48px]">
                 {page.pointsTitle}
               </h3>
-              <ul className="mt-5 space-y-4 text-[#2f241d] font-body">
+              <ul className="mx-auto mt-8 grid max-w-4xl gap-6 md:grid-cols-2 md:gap-x-8 lg:gap-x-10">
                 {page.points.map((item) => (
-                  <li key={item.title}>
-                    <p className="text-[18px] font-bold leading-[1] font-display uppercase text-[#2f241d] sm:text-[21px]">
-                      {item.title}
-                    </p>
-                    <p className="mt-1 text-[16px] leading-[1.25] text-[#5f544c]">
-                      {item.description}
-                    </p>
+                  <li key={item.title} className="flex items-center gap-4">
+                    <div className="flex aspect-square h-20 w-20 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)] p-4">
+                      {item.icon ? (
+                        <Image src={item.icon} alt="" className="h-10 w-10 object-contain" />
+                      ) : (
+                        <span className="h-2 w-2 rounded-full bg-[var(--brand-gold)]" aria-hidden="true" />
+                      )}
+                    </div>
+                    <div>
+                      <p className="font-display text-[20px] font-bold uppercase leading-[0.95] tracking-[0] text-[#2f241d] sm:text-[24px]">
+                        {item.title}
+                      </p>
+                      <p className="mt-1 text-[16px] leading-[1.2] text-[#6d6057] font-body">
+                        {item.description}
+                      </p>
+                    </div>
                   </li>
                 ))}
               </ul>
-              <Link
-                className="mt-6 inline-flex items-center justify-center bg-[#d7d7d7] px-5 py-2.5 text-[17px] font-semibold leading-none !text-[#29211c] transition hover:bg-[#cbcbcb]"
-                href="/services"
-              >
-                Explore Our Services
-              </Link>
+              <div className="mt-9 text-center">
+                <Link
+                  className="inline-flex items-center justify-center bg-[var(--brand-gold)] px-8 py-3 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
+                  href="/services"
+                >
+                  Explore Our Other Services
+                </Link>
+              </div>
             </div>
+          ) : (
+            <div className="mt-12 grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+              <div>
+                <h3 className="font-display text-[32px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[42px] lg:text-[52px]">
+                  {page.pointsTitle}
+                </h3>
+                <ul className="mt-5 space-y-4 text-[#2f241d] font-body">
+                  {page.points.map((item) => (
+                    <li key={item.title}>
+                      <p className="text-[18px] font-bold leading-[1] font-display uppercase text-[#2f241d] sm:text-[21px]">
+                        {item.title}
+                      </p>
+                      <p className="mt-1 text-[16px] leading-[1.25] text-[#5f544c]">
+                        {item.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  className="mt-6 inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
+                  href="/services"
+                >
+                  Explore Our Services
+                </Link>
+              </div>
 
-            <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#d2d2d2]">
-              <Image
-                src={page.secondaryImage}
-                alt={`${page.heroTitle} project`}
-                fill
-                className="object-cover"
-              />
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#d2d2d2]">
+                <Image
+                  src={page.secondaryImage}
+                  alt={`${page.heroTitle} project`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
-          </div>
+          )}
         </section>
 
         <section className="mx-auto w-full max-w-6xl px-6 py-10 lg:px-10 lg:py-12">
           <h3 className="text-center font-display text-[34px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[46px] lg:text-[54px]">
             View Our Past Projects
           </h3>
-          <div className="mt-7 grid gap-4 md:grid-cols-3 lg:gap-5">
-            {page.projectImages.map((projectImage, index) => (
-              <div
-                key={`${page.heroTitle}-project-${index}`}
-                className="relative aspect-[16/9] w-full overflow-hidden bg-[#d2d2d2]"
-              >
-                <Image
-                  src={projectImage}
-                  alt={`${page.heroTitle} past project ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          <LightboxGallery
+            images={page.projectImages.map((projectImage, index) => ({
+              src: projectImage,
+              alt: `${page.heroTitle} past project ${index + 1}`,
+            }))}
+            gridClassName="mt-7 grid gap-4 md:grid-cols-3 lg:gap-5"
+            itemClassName="relative aspect-[16/9] w-full overflow-hidden bg-[#d2d2d2]"
+            imageClassName="object-cover"
+          />
         </section>
 
         <section className="pb-16 pt-8 lg:pb-20">
@@ -298,7 +363,7 @@ export default async function ServiceDetailPage({
               experience.
             </p>
             <Link
-              className="mt-6 inline-flex items-center justify-center bg-[#d7d7d7] px-5 py-2.5 text-[17px] font-semibold leading-none !text-[#29211c] transition hover:bg-[#cbcbcb]"
+              className="mt-6 inline-flex items-center justify-center bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
               href="/contact"
             >
               Request a Quote

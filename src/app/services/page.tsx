@@ -3,7 +3,7 @@ import Link from "next/link";
 import CtaBand from "../components/CtaBand";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import heroImage from "../assets/work/our-work-7.png";
+import heroImage from "../assets/services/services hero image.jpg";
 import serviceCommercial from "../assets/services/commercial.png";
 import serviceResidential from "../assets/services/residential.png";
 import serviceTransportation from "../assets/services/transportation.png";
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="px-6 py-6">
-                    <h2 className="font-display text-[34px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[40px] lg:text-[48px]">
+                    <h2 className="font-display text-[32px] font-bold uppercase leading-[1] tracking-[0] text-[#2f241d]">
                       {card.title}
                     </h2>
                     <p className="relative mt-2 max-w-[430px] pl-3 text-[16px] leading-[1.2] text-[#6d6057] font-body">
@@ -115,7 +115,7 @@ export default function ServicesPage() {
 
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 pb-16 text-center lg:px-10 lg:pb-20">
-            <h2 className="font-display text-[40px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[60px] lg:text-[96px]">
+            <h2 className="text-center font-display text-[60px] font-bold leading-[1] tracking-[0] text-[#2f241d]">
               Expert Construction, Modular Installation & Transportation Solutions
             </h2>
             <p className="mx-auto mt-5 max-w-4xl text-[16px] leading-[1.25] text-[#6d6057] font-body">

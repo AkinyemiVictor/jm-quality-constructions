@@ -2,6 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import LightboxGallery from "../../components/LightboxGallery";
 import stickBuiltImage from "../../assets/work/our-work-1.png";
 import panelizedImage from "../../assets/work/our-work-8.png";
 import multiStoryImage from "../../assets/work/our-work-7.png";
@@ -232,21 +233,15 @@ export default async function FramingDetailPage({
           <h3 className="text-center font-display text-[34px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[46px] lg:text-[54px]">
             View Our Past Projects
           </h3>
-          <div className="mt-7 grid gap-4 md:grid-cols-3 lg:gap-5">
-            {page.projectImages.map((projectImage, index) => (
-              <div
-                key={`${page.heroTitle}-project-${index}`}
-                className="relative aspect-[16/9] w-full overflow-hidden bg-[#d2d2d2]"
-              >
-                <Image
-                  src={projectImage}
-                  alt={`${page.heroTitle} past project ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          <LightboxGallery
+            images={page.projectImages.map((projectImage, index) => ({
+              src: projectImage,
+              alt: `${page.heroTitle} past project ${index + 1}`,
+            }))}
+            gridClassName="mt-7 grid gap-4 md:grid-cols-3 lg:gap-5"
+            itemClassName="relative aspect-[16/9] w-full overflow-hidden bg-[#d2d2d2]"
+            imageClassName="object-cover"
+          />
         </section>
 
         <section className="pb-16 pt-8 lg:pb-20">

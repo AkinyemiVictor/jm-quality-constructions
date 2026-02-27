@@ -224,7 +224,7 @@ export default function PlumbingPage() {
               <div className="mt-8 grid gap-6 md:grid-cols-2">
                 {whyChooseItems.map((item) => (
                   <div key={item.title} className="flex items-center gap-4">
-                    <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)] p-4">
+                    <div className="flex aspect-square h-20 w-20 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)] p-4">
                       <Image src={item.icon} alt="" className="h-10 w-10 object-contain" />
                     </div>
                     <div>

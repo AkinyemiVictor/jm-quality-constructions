@@ -1,6 +1,7 @@
 ﻿import CtaBand from "./components/CtaBand";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import LightboxGallery from "./components/LightboxGallery";
 import Image from "next/image";
 import Link from "next/link";
 import heroImage from "./assets/hero/image-bg.png";
@@ -20,6 +21,8 @@ import work5 from "./assets/work/our-work-5.png";
 import work6 from "./assets/work/our-work-6.png";
 import work7 from "./assets/work/our-work-7.png";
 import work8 from "./assets/work/our-work-8.png";
+
+const workImages = [work1, work2, work3, work4, work5, work6, work7, work8];
 
 export default function Home() {
   return (
@@ -202,11 +205,11 @@ export default function Home() {
                     key={item.title}
                     className="flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:gap-6 md:text-left"
                   >
-                    <div className="flex aspect-square h-28 w-28 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)]">
+                    <div className="flex aspect-square h-20 w-20 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)] p-4">
                       <Image
                         src={iconSrc}
                         alt=""
-                        className="h-16 w-16 object-contain"
+                        className="h-10 w-10 object-contain"
                       />
                     </div>
                     <div className="max-w-[520px]">
@@ -236,30 +239,15 @@ export default function Home() {
             <h2 className="text-center font-display text-[34px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22] sm:text-[38px]">
               Our Work
             </h2>
-            <div className="mt-10 grid gap-0 overflow-hidden border border-transparent sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                work1,
-                work2,
-                work3,
-                work4,
-                work5,
-                work6,
-                work7,
-                work8,
-              ].map((image, index) => (
-                <div
-                  key={`work-${index}`}
-                  className="relative aspect-[4/3] w-full border border-transparent"
-                >
-                  <Image
-                    src={image}
-                    alt={`Our work ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+            <LightboxGallery
+              images={workImages.map((image, index) => ({
+                src: image,
+                alt: `Our work ${index + 1}`,
+              }))}
+              gridClassName="mt-10 grid gap-0 overflow-hidden border border-transparent sm:grid-cols-2 lg:grid-cols-4"
+              itemClassName="relative aspect-[4/3] w-full border border-transparent"
+              imageClassName="object-cover"
+            />
           </div>
         </section>
       </main>
