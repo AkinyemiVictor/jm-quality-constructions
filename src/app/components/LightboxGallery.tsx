@@ -115,7 +115,7 @@ export default function LightboxGallery({
         >
           <button
             type="button"
-            className="absolute inset-0 bg-black/70 backdrop-blur-md"
+            className="absolute inset-0 bg-transparent backdrop-blur-md"
             onClick={close}
             aria-label="Close expanded image"
           />
@@ -152,7 +152,7 @@ export default function LightboxGallery({
               </>
             ) : null}
 
-            <div className="relative h-[72vh] w-full overflow-hidden bg-transparent shadow-[0_24px_70px_rgba(0,0,0,0.45)]">
+            <div className="relative h-[72vh] w-full overflow-hidden bg-transparent shadow-none">
               <Image
                 src={images[activeIndex].src}
                 alt={images[activeIndex].alt}

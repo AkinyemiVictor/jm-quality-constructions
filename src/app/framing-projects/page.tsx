@@ -138,7 +138,7 @@ export default function FramingProjectsPage() {
                           {service.description}
                         </p>
                         <Link
-                          className="mt-4 inline-flex h-[21px] w-[119px] items-center justify-start gap-2 font-display text-[21px] font-bold uppercase leading-[1] tracking-[0] text-[var(--brand-gold)] transition hover:text-[var(--brand-gold-soft)]"
+                          className="mt-4 inline-flex min-w-[160px] items-center justify-center gap-2 bg-[var(--brand-gold)] px-6 py-2.5 text-[18px] font-extrabold leading-none tracking-[0] !text-white transition hover:bg-[var(--brand-gold-soft)]"
                           href={service.href}
                         >
                           Learn More <span aria-hidden="true">-&gt;</span>
