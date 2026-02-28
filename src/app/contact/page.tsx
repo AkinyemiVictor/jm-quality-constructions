@@ -59,7 +59,7 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/35 to-black/70" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-4 pb-8 sm:px-6 lg:px-10 lg:pb-10">
-            <h1 className="font-display text-[38px] font-bold uppercase leading-[0.85] tracking-[0] sm:text-[52px] lg:text-[62px]">
+            <h1 className="hero-heading">
               Contact Us
             </h1>
             <p className="mt-2 text-sm font-body text-white/80">
@@ -78,15 +78,15 @@ export default function ContactPage() {
                 <iframe
                   title="JM Quality Construction location map"
                   src="https://www.openstreetmap.org/export/embed.html?bbox=-86.25%2C41.35%2C-85.55%2C41.75&layer=mapnik&marker=41.5362%2C-85.7069"
-                  className="absolute inset-0 h-full w-full border-0"
+                  className="absolute inset-0 z-10 h-full w-full border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
-                <div className="pointer-events-none absolute left-1/2 top-1/2 h-[82%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ca7665]/60 mix-blend-multiply" />
+                <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[82%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ca7665]/85" />
               </div>
 
               <div>
-                <h2 className="font-display text-[60px] font-bold uppercase leading-[1] tracking-[0] text-center text-[#2f241d]">
+                <h2 className="section-heading text-center text-[#2f241d]">
                   JM Quality Construction LLC
                 </h2>
                 <p className="mt-4 text-[15px] leading-[1.45] text-[#6d6057] font-body sm:text-[16px]">
@@ -117,7 +117,7 @@ export default function ContactPage() {
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
             <div className="max-w-3xl">
-              <h2 className="font-display text-[60px] font-bold uppercase leading-[1] tracking-[0] text-center text-[#2f241d]">
+              <h2 className="section-heading text-center text-[#2f241d]">
                 Tell Us About Your Project
               </h2>
               <p className="mt-4 max-w-2xl text-[15px] leading-[1.45] text-[#6d6057] font-body sm:text-[16px]">

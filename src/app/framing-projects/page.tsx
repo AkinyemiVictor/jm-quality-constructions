@@ -70,7 +70,7 @@ export default function FramingProjectsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/75" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-8 lg:px-10 lg:pb-11">
-            <h1 className="font-display text-[58px] font-bold uppercase leading-[0.9] tracking-[-0.02em] sm:text-[76px] lg:text-[100px]">
+            <h1 className="hero-heading">
               Framing Projects
             </h1>
             <p className="mt-2 text-sm font-body text-white/80">
@@ -86,7 +86,7 @@ export default function FramingProjectsPage() {
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 py-14 lg:px-10 lg:py-16">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-center font-display text-[60px] font-bold leading-[1] tracking-[0] text-[#2f241d]">
+              <h2 className="section-heading text-center text-[#2f241d]">
                 Expert Framing Solutions for Any Build
               </h2>
               <p className="mx-auto mt-5 max-w-3xl text-[16px] leading-[1.3] text-[#6d6057] font-body">

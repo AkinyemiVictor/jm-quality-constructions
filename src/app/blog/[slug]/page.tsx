@@ -28,7 +28,7 @@ export default async function BlogDetailPage({
       <main className="bg-[#efefef] text-[#3a2b22]">
         <section className="relative bg-[#ece8df]">
           <div className="relative z-20 mx-auto w-full max-w-6xl px-6 pb-36 pt-28 lg:px-10 lg:pb-40 lg:pt-32">
-            <h1 className="max-w-4xl font-display text-[36px] font-normal uppercase leading-[0.9] tracking-[0] text-[#32271f] sm:text-[46px] lg:text-[56px]">
+            <h1 className="hero-heading max-w-4xl text-[#32271f]">
               {post.title}
             </h1>
             <p className="mt-3 text-sm text-[#695c53] font-body">

@@ -21,7 +21,7 @@ export default function NewsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/35 to-black/65" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-8 lg:px-10 lg:pb-10">
-            <h1 className="font-display text-[46px] font-bold uppercase leading-[0.85] tracking-[0] sm:text-[62px]">
+            <h1 className="hero-heading">
               Blog
             </h1>
             <p className="mt-2 text-sm font-body text-white/80">

@@ -113,7 +113,7 @@ export default function PlumbingPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/45 to-black/75" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-8 lg:px-10 lg:pb-11">
-            <h1 className="font-display text-[48px] font-bold uppercase leading-[0.85] tracking-[0] sm:text-[66px] lg:text-[90px]">
+            <h1 className="hero-heading">
               Plumbing
             </h1>
             <p className="mt-2 text-sm font-body text-white/80">
@@ -128,7 +128,7 @@ export default function PlumbingPage() {
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 py-14 lg:px-10 lg:py-16">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="font-display text-[40px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[56px] lg:text-[68px]">
+              <h2 className="section-heading text-[#2f241d]">
                 Reliable Plumbing, Backed By Licensed Expertise
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-[16px] leading-[1.3] text-[#6d6057] font-body">
@@ -218,16 +218,19 @@ export default function PlumbingPage() {
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 pb-14 lg:px-10 lg:pb-16">
             <div className="bg-[#ece7db] px-6 py-10 sm:px-10 lg:px-14 lg:py-12">
-              <h2 className="text-center font-display text-[36px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[48px] lg:text-[60px]">
+              <h2 className="section-heading text-center text-[#2f241d]">
                 Why Choose JM Quality Construction Plumbing?
               </h2>
               <div className="mt-8 grid gap-6 md:grid-cols-2">
                 {whyChooseItems.map((item) => (
-                  <div key={item.title} className="flex items-center gap-4">
+                  <div
+                    key={item.title}
+                    className="flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:gap-6 md:text-left"
+                  >
                     <div className="flex aspect-square h-20 w-20 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)] p-4">
                       <Image src={item.icon} alt="" className="h-10 w-10 object-contain" />
                     </div>
-                    <div>
+                    <div className="max-w-[520px]">
                       <p className="font-display text-[20px] font-bold uppercase leading-[0.95] text-[#2f241d] sm:text-[24px]">
                         {item.title}
                       </p>
@@ -252,7 +255,7 @@ export default function PlumbingPage() {
 
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 pb-14 lg:px-10 lg:pb-16">
-            <h2 className="text-center font-display text-[36px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[48px] lg:text-[60px]">
+            <h2 className="section-heading text-center text-[#2f241d]">
               Our Process
             </h2>
             <div className="mt-6 grid gap-5 md:grid-cols-4">
@@ -272,7 +275,7 @@ export default function PlumbingPage() {
 
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-3xl px-6 pb-16 lg:pb-20">
-            <h2 className="font-display text-[36px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[48px] lg:text-[60px]">
+            <h2 className="section-heading text-[#2f241d]">
               Contact JM Quality Construction Plumbing
             </h2>
 

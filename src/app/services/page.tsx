@@ -60,7 +60,7 @@ export default function ServicesPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-8 lg:px-10 lg:pb-11">
-            <h1 className="font-display text-[50px] font-bold uppercase leading-[0.85] tracking-[0] sm:text-[68px] lg:text-[92px]">
+            <h1 className="hero-heading">
               Our Services
             </h1>
             <p className="mt-2 text-sm font-body text-white/80">
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="px-6 py-6">
-                    <h2 className="font-display text-[32px] font-bold uppercase leading-[1] tracking-[0] text-[#2f241d]">
+                    <h2 className="section-heading text-[#2f241d]">
                       {card.title}
                     </h2>
                     <p className="relative mt-2 max-w-[430px] pl-3 text-[16px] leading-[1.2] text-[#6d6057] font-body">
@@ -115,7 +115,7 @@ export default function ServicesPage() {
 
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 pb-16 text-center lg:px-10 lg:pb-20">
-            <h2 className="text-center font-display text-[60px] font-bold leading-[1] tracking-[0] text-[#2f241d]">
+            <h2 className="section-heading text-center text-[#2f241d]">
               Expert Construction, Modular Installation & Transportation Solutions
             </h2>
             <p className="mx-auto mt-5 max-w-4xl text-[16px] leading-[1.25] text-[#6d6057] font-body">

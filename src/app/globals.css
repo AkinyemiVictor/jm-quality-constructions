@@ -70,6 +70,44 @@ a {
   -webkit-box-orient: vertical;
 }
 
+.hero-heading {
+  font-family: var(--font-display), "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  font-family: var(--font-display), "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .hero-heading {
+    font-size: 52px;
+  }
+
+  .section-heading {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-heading {
+    font-size: 60px;
+  }
+
+  .section-heading {
+    font-size: 48px;
+  }
+}
+
 @media (max-width: 525px) {
   .nav-links.angled-nav {
     display: none !important;

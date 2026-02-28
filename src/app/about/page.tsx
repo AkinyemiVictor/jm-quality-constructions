@@ -60,7 +60,7 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/35 to-black/70" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-8 lg:px-10 lg:pb-10">
-            <h1 className="font-display text-[46px] font-bold uppercase leading-[0.85] tracking-[0] sm:text-[62px]">
+            <h1 className="hero-heading">
               About Us
             </h1>
             <p className="mt-2 text-sm font-body text-white/80">
@@ -75,7 +75,7 @@ export default function AboutPage() {
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 py-14 lg:px-10 lg:py-16">
             <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#d6d2ca]">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#d6d2ca] lg:aspect-square">
                 <Image
                   src={featureImage}
                   alt="Modular installation project"
@@ -85,7 +85,7 @@ export default function AboutPage() {
               </div>
 
               <div className="max-w-[560px]">
-                <h2 className="font-display text-[32px] font-bold uppercase leading-[1] tracking-[0] text-[#2f241d]">
+                <h2 className="section-heading text-[#2f241d]">
                   Modular Expertise. Quality Craftsmanship. Trusted Partnerships.
                 </h2>
                 <div className="mt-5 space-y-5 text-[16px] leading-[1.35] text-[#6d6057] font-body text-justify">
@@ -134,12 +134,15 @@ export default function AboutPage() {
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 pb-14 lg:px-10 lg:pb-16">
             <div className="bg-[#ece7db] px-6 py-10 sm:px-10 lg:px-14 lg:py-12">
-              <h2 className="text-center font-display text-[38px] font-bold uppercase leading-[1] tracking-[0] text-[#2f241d]">
+              <h2 className="section-heading text-center text-[#2f241d]">
                 What Sets Us Apart?
               </h2>
               <div className="mt-8 grid gap-7 md:grid-cols-2">
                 {differentiators.map((item) => (
-                  <div key={item.title} className="flex items-center gap-5">
+                  <div
+                    key={item.title}
+                    className="flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:gap-6 md:text-left"
+                  >
                     <div className="flex aspect-square h-20 w-20 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)] p-4">
                       <Image
                         src={item.icon}
@@ -147,11 +150,11 @@ export default function AboutPage() {
                         className="h-10 w-10 object-contain"
                       />
                     </div>
-                    <div className="min-w-0">
+                    <div className="min-w-0 max-w-[520px]">
                       <p className="font-display text-[24px] font-normal uppercase leading-[26px] tracking-[0] text-[#2f241d]">
                         {item.title}
                       </p>
-                      <p className="mt-1 max-w-[320px] text-[15px] leading-[1.3] text-[#6d6057] font-body text-justify">
+                      <p className="mt-1 text-[15px] leading-[1.3] text-[#6d6057] font-body">
                         {item.description}
                       </p>
                     </div>
@@ -172,7 +175,7 @@ export default function AboutPage() {
 
         <section className="bg-[#efefef]">
           <div className="mx-auto w-full max-w-6xl px-6 pb-16 lg:px-10 lg:pb-20">
-            <h2 className="text-center font-display text-[38px] font-bold uppercase leading-none tracking-[0] text-[#2f241d] sm:text-[46px] lg:text-[54px]">
+            <h2 className="section-heading text-center text-[#2f241d]">
               Our Work
             </h2>
             <LightboxGallery
@@ -180,7 +183,7 @@ export default function AboutPage() {
                 src: image,
                 alt: `JM Quality Construction project ${index + 1}`,
               }))}
-              gridClassName="mt-8 grid gap-0 overflow-hidden border border-transparent sm:grid-cols-2 lg:grid-cols-4"
+              gridClassName="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
               itemClassName="relative aspect-[4/3] w-full border border-transparent"
               imageClassName="object-cover"
             />

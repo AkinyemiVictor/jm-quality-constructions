@@ -39,7 +39,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/15 to-black/35" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-10 pt-10 sm:pb-12 lg:px-10 lg:pb-16">
-            <h1 className="font-display text-[58px] font-bold uppercase leading-[0.88] tracking-[-0.02em] drop-shadow-md sm:text-[78px] lg:text-[100px] lg:leading-[90px]">
+            <h1 className="hero-heading drop-shadow-md">
               JM Quality Construction
             </h1>
             <p className="mt-3 max-w-[640px] text-[16px] leading-[1.2] text-white/90 sm:text-[18px] lg:text-[19px]">
@@ -57,7 +57,7 @@ export default function Home() {
         <section className="bg-white text-[#3a2b22]">
           <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10 lg:py-20">
             <div className="text-center">
-              <h2 className="font-display text-[42px] font-bold uppercase leading-none tracking-[0] sm:text-[52px] lg:text-[60px]">
+              <h2 className="section-heading">
                 Full-Service Modular Installation,
                 <br />
                 Framing &amp; Transportation
@@ -171,7 +171,7 @@ export default function Home() {
         </section>
         <section className="bg-[#f7efe3] text-[#3a2b22]">
           <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10 lg:py-20">
-            <h2 className="text-center font-display text-[34px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22] sm:text-[38px]">
+            <h2 className="section-heading text-center text-[#3a2b22]">
               Why Choose JM Quality Construction?
             </h2>
             <div className="mt-12 grid gap-10 md:grid-cols-2">
@@ -236,7 +236,7 @@ export default function Home() {
         </section>
         <section className="bg-white text-[#3a2b22]">
           <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10 lg:py-20">
-            <h2 className="text-center font-display text-[34px] font-bold uppercase leading-none tracking-[0] text-[#3a2b22] sm:text-[38px]">
+            <h2 className="section-heading text-center text-[#3a2b22]">
               Our Work
             </h2>
             <LightboxGallery
@@ -244,7 +244,7 @@ export default function Home() {
                 src: image,
                 alt: `Our work ${index + 1}`,
               }))}
-              gridClassName="mt-10 grid gap-0 overflow-hidden border border-transparent sm:grid-cols-2 lg:grid-cols-4"
+              gridClassName="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
               itemClassName="relative aspect-[4/3] w-full border border-transparent"
               imageClassName="object-cover"
             />

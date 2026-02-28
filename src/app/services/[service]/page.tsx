@@ -218,7 +218,7 @@ export default async function ServiceDetailPage({
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
           <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-start justify-end px-6 pb-8 lg:px-10 lg:pb-11">
-            <h1 className="font-display text-[44px] font-bold uppercase leading-[1] tracking-[0] text-white sm:text-[52px] lg:text-[60px]">
+            <h1 className="hero-heading text-white">
               {page.heroTitle}
             </h1>
             <p className="mt-2 text-sm font-body text-white/80">
@@ -246,7 +246,7 @@ export default async function ServiceDetailPage({
             </div>
 
             <div>
-              <h2 className="font-display text-[32px] font-bold leading-[1] tracking-[0] text-[#2f241d]">
+              <h2 className="section-heading text-[#2f241d]">
                 {page.introTitle}
               </h2>
               <div className="mt-4 space-y-4 text-[16px] leading-[1.3] text-[#5f544c] font-body">
@@ -265,12 +265,15 @@ export default async function ServiceDetailPage({
 
           {usesIconPointsSection ? (
             <div className="mt-12 bg-[#ece7db] px-5 py-10 sm:px-8 lg:px-14 lg:py-12">
-              <h3 className="text-center font-display text-[36px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[48px]">
+              <h3 className="section-heading text-center text-[#2f241d]">
                 {page.pointsTitle}
               </h3>
               <ul className="mx-auto mt-8 grid max-w-4xl gap-6 md:grid-cols-2 md:gap-x-8 lg:gap-x-10">
                 {page.points.map((item) => (
-                  <li key={item.title} className="flex items-center gap-4">
+                  <li
+                    key={item.title}
+                    className="flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:gap-6 md:text-left"
+                  >
                     <div className="flex aspect-square h-20 w-20 shrink-0 items-center justify-center rounded-full border border-[var(--brand-gold)] p-4">
                       {item.icon ? (
                         <Image src={item.icon} alt="" className="h-10 w-10 object-contain" />
@@ -278,7 +281,7 @@ export default async function ServiceDetailPage({
                         <span className="h-2 w-2 rounded-full bg-[var(--brand-gold)]" aria-hidden="true" />
                       )}
                     </div>
-                    <div>
+                    <div className="max-w-[520px]">
                       <p className="font-display text-[20px] font-bold uppercase leading-[0.95] tracking-[0] text-[#2f241d] sm:text-[24px]">
                         {item.title}
                       </p>
@@ -301,7 +304,7 @@ export default async function ServiceDetailPage({
           ) : (
             <div className="mt-12 grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
               <div>
-                <h3 className="font-display text-[32px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[42px] lg:text-[52px]">
+                <h3 className="section-heading text-[#2f241d]">
                   {page.pointsTitle}
                 </h3>
                 <ul className="mt-5 space-y-4 text-[#2f241d] font-body">
@@ -337,7 +340,7 @@ export default async function ServiceDetailPage({
         </section>
 
         <section className="mx-auto w-full max-w-6xl px-6 py-10 lg:px-10 lg:py-12">
-          <h3 className="text-center font-display text-[34px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[46px] lg:text-[54px]">
+          <h3 className="section-heading text-center text-[#2f241d]">
             View Our Past Projects
           </h3>
           <LightboxGallery
@@ -345,7 +348,7 @@ export default async function ServiceDetailPage({
               src: projectImage,
               alt: `${page.heroTitle} past project ${index + 1}`,
             }))}
-            gridClassName="mt-7 grid gap-4 md:grid-cols-3 lg:gap-5"
+            gridClassName="mt-7 grid gap-4 md:grid-cols-3"
             itemClassName="relative aspect-[16/9] w-full overflow-hidden bg-[#d2d2d2]"
             imageClassName="object-cover"
           />
@@ -353,7 +356,7 @@ export default async function ServiceDetailPage({
 
         <section className="pb-16 pt-8 lg:pb-20">
           <div className="mx-auto w-full max-w-4xl px-6 text-center lg:px-10">
-            <h3 className="font-display text-[34px] font-bold uppercase leading-[0.9] tracking-[0] text-[#2f241d] sm:text-[48px] lg:text-[58px]">
+            <h3 className="section-heading text-[#2f241d]">
               Get Your Project Moving
             </h3>
             <p className="mx-auto mt-4 max-w-3xl text-[16px] leading-[1.25] text-[#5f544c] font-body">
